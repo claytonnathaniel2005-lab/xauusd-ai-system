@@ -1,15 +1,15 @@
 {
   "instrument": "XAU/USD",
-  "generated_utc": "2026-10-28T06:08:38.210436+00:00",
+  "generated_utc": "2026-10-28T06:13:20.313931+00:00",
   "provider": "Twelve Data",
   "warning": "DATA REVIEW ONLY. Not an executable trading signal; the Twelve Data feed may differ materially from your OANDA/MT5 execution prices. D1 provider candle boundaries differ from UTC.",
   "timeframes": {
     "5min": {
       "bars_returned": 1000,
-      "last_bar_timestamp": "2026-10-28T06:00:00+00:00",
-      "last_bar_close": 4030.091,
-      "last_bar_high": 4031.4,
-      "last_bar_low": 4029.983,
+      "last_bar_timestamp": "2026-10-28T06:05:00+00:00",
+      "last_bar_close": 4030.044,
+      "last_bar_high": 4030.633,
+      "last_bar_low": 4028.651,
       "candle_status": "closed by UTC bar duration",
       "pivots": {
         "confirmed_fractal_highs": [
@@ -249,7 +249,7 @@
     "1day": {
       "bars_returned": 100,
       "last_bar_timestamp": "2026-10-28T00:00:00+00:00",
-      "last_bar_close": 4028.954,
+      "last_bar_close": 4029.115,
       "last_bar_high": 4070.17,
       "last_bar_low": 4028.651,
       "candle_status": "UNVERIFIED: daily provider boundary",
@@ -297,8 +297,8 @@
     "london_indicator_window_02_00_05_00_ET": {
       "status": "partial",
       "high": 4031.4,
-      "low": 4029.983,
-      "bars_seen": 1,
+      "low": 4028.651,
+      "bars_seen": 2,
       "start_ny": "2026-10-28T02:00:00-04:00",
       "end_ny": "2026-10-28T05:00:00-04:00"
     },
@@ -325,12 +325,12 @@
       "start_new_york": "2026-10-28T01:00:00-04:00",
       "end_new_york": "2026-10-28T08:00:00-04:00",
       "expected_m5_bars": 84,
-      "bars_seen": 13,
+      "bars_seen": 14,
       "status": "forming",
       "open": 4036.874,
       "high": 4037.649,
-      "low": 4029.983,
-      "close": 4030.091
+      "low": 4028.651,
+      "close": 4030.044
     },
     "new_york_08_00_et": {
       "start_new_york": "2026-10-28T08:00:00-04:00",
