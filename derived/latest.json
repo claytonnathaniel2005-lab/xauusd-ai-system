@@ -1,22 +1,18 @@
 {
   "instrument": "XAU/USD",
-  "generated_utc": "2026-10-28T12:15:08.729510+00:00",
+  "generated_utc": "2026-10-28T12:57:32.781376+00:00",
   "provider": "Twelve Data",
   "warning": "DATA REVIEW ONLY. Not an executable trading signal; the Twelve Data feed may differ materially from your OANDA/MT5 execution prices. D1 provider candle boundaries differ from UTC.",
   "timeframes": {
     "5min": {
       "bars_returned": 1000,
-      "last_bar_timestamp": "2026-10-28T12:10:00+00:00",
-      "last_bar_close": 4049.436,
-      "last_bar_high": 4049.681,
-      "last_bar_low": 4048.728,
+      "last_bar_timestamp": "2026-10-28T12:50:00+00:00",
+      "last_bar_close": 4052.184,
+      "last_bar_high": 4054.381,
+      "last_bar_low": 4049.707,
       "candle_status": "closed by UTC bar duration",
       "pivots": {
         "confirmed_fractal_highs": [
-          {
-            "time_utc": "2026-10-28T10:00:00+00:00",
-            "price": 4055.808
-          },
           {
             "time_utc": "2026-10-28T10:45:00+00:00",
             "price": 4047.764
@@ -24,6 +20,10 @@
           {
             "time_utc": "2026-10-28T11:45:00+00:00",
             "price": 4049.845
+          },
+          {
+            "time_utc": "2026-10-28T12:25:00+00:00",
+            "price": 4059.916
           }
         ],
         "confirmed_fractal_lows": [
@@ -43,6 +43,13 @@
       },
       "recent_unrevisited_fvg_candidates": [
         {
+          "formed_utc": "2026-10-28T07:30:00+00:00",
+          "direction": "bullish",
+          "low": 4035.187,
+          "high": 4035.675,
+          "status": "not subsequently touched by available bars"
+        },
+        {
           "formed_utc": "2026-10-28T08:00:00+00:00",
           "direction": "bullish",
           "low": 4039.99,
@@ -50,34 +57,27 @@
           "status": "not subsequently touched by available bars"
         },
         {
-          "formed_utc": "2026-10-28T10:10:00+00:00",
-          "direction": "bearish",
-          "low": 4051.993,
-          "high": 4053.248,
-          "status": "not subsequently touched by available bars"
-        },
-        {
-          "formed_utc": "2026-10-28T10:15:00+00:00",
-          "direction": "bearish",
-          "low": 4050.223,
-          "high": 4050.879,
-          "status": "not subsequently touched by available bars"
-        },
-        {
           "formed_utc": "2026-10-28T12:10:00+00:00",
           "direction": "bullish",
           "low": 4047.237,
-          "high": 4048.728,
+          "high": 4048.216,
+          "status": "not subsequently touched by available bars"
+        },
+        {
+          "formed_utc": "2026-10-28T12:15:00+00:00",
+          "direction": "bullish",
+          "low": 4049.094,
+          "high": 4049.682,
           "status": "not subsequently touched by available bars"
         }
       ]
     },
     "15min": {
       "bars_returned": 480,
-      "last_bar_timestamp": "2026-10-28T12:00:00+00:00",
-      "last_bar_close": 4049.436,
-      "last_bar_high": 4049.681,
-      "last_bar_low": 4044.296,
+      "last_bar_timestamp": "2026-10-28T12:30:00+00:00",
+      "last_bar_close": 4054.283,
+      "last_bar_high": 4057.124,
+      "last_bar_low": 4053.342,
       "candle_status": "closed by UTC bar duration",
       "pivots": {
         "confirmed_fractal_highs": [
@@ -96,16 +96,16 @@
         ],
         "confirmed_fractal_lows": [
           {
-            "time_utc": "2026-10-28T02:15:00+00:00",
-            "price": 4045.144
-          },
-          {
             "time_utc": "2026-10-28T07:00:00+00:00",
             "price": 4028.014
           },
           {
             "time_utc": "2026-10-28T11:00:00+00:00",
             "price": 4043.181
+          },
+          {
+            "time_utc": "2026-10-28T12:00:00+00:00",
+            "price": 4044.296
           }
         ]
       },
@@ -132,10 +132,10 @@
           "status": "not subsequently touched by available bars"
         },
         {
-          "formed_utc": "2026-10-28T10:15:00+00:00",
-          "direction": "bearish",
-          "low": 4050.223,
-          "high": 4052.849,
+          "formed_utc": "2026-10-28T12:30:00+00:00",
+          "direction": "bullish",
+          "low": 4051.566,
+          "high": 4053.342,
           "status": "not subsequently touched by available bars"
         }
       ]
@@ -249,7 +249,7 @@
     "1day": {
       "bars_returned": 100,
       "last_bar_timestamp": "2026-10-28T00:00:00+00:00",
-      "last_bar_close": 4049.436,
+      "last_bar_close": 4052.004,
       "last_bar_high": 4070.17,
       "last_bar_low": 4028.014,
       "candle_status": "UNVERIFIED: daily provider boundary",
@@ -336,12 +336,12 @@
       "start_new_york": "2026-10-28T08:00:00-04:00",
       "end_new_york": "2026-10-28T15:00:00-04:00",
       "expected_m5_bars": 84,
-      "bars_seen": 3,
+      "bars_seen": 11,
       "status": "forming",
       "open": 4046.186,
-      "high": 4049.681,
+      "high": 4059.916,
       "low": 4044.296,
-      "close": 4049.436
+      "close": 4052.184
     },
     "model_status": "study_only; unconfirmed without HTF key-level and CISD validation",
     "entry_signal": "NO TRADE (CISD, protected swing and >=2R entry not verified)",
