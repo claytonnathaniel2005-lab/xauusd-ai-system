@@ -1,23 +1,23 @@
 {
   "instrument": "XAU/USD",
   "provider": "Twelve Data",
-  "retrieved_utc": "2026-10-28T15:32:00.794379+00:00",
+  "retrieved_utc": "2026-10-28T15:35:04.716834+00:00",
   "on_demand_request": {
-    "request_id": "chat-20261028T153125Z",
-    "requested_utc": "2026-10-28T15:31:25+00:00",
+    "request_id": "chat-20261028T153434Z",
+    "requested_utc": "2026-10-28T15:34:34+00:00",
     "status": "trigger_recognized"
   },
-  "latest_price": 4042.691,
+  "latest_price": 4043.672,
   "quote_timestamp_utc": null,
   "quote_status": "retrieved_from_price_endpoint_timestamp_unknown",
   "last_closed_1min": {
-    "start_utc": "2026-10-28T15:30:00+00:00",
-    "close_utc": "2026-10-28T15:31:00+00:00",
-    "open": 4045.352,
-    "high": 4045.352,
-    "low": 4043.318,
-    "close": 4043.814,
-    "age_minutes_at_generation": 1.0
+    "start_utc": "2026-10-28T15:33:00+00:00",
+    "close_utc": "2026-10-28T15:34:00+00:00",
+    "open": 4042.199,
+    "high": 4042.715,
+    "low": 4040.436,
+    "close": 4040.748,
+    "age_minutes_at_generation": 1.1
   },
   "minute_data_status": "fresh_at_generation",
   "recent_unrevisited_m1_fvg_candidates": [
@@ -36,19 +36,15 @@
       "status": "not subsequently touched by available bars"
     },
     {
-      "formed_utc": "2026-10-28T15:01:00+00:00",
-      "direction": "bullish",
-      "low": 4041.908,
-      "high": 4041.938,
+      "formed_utc": "2026-10-28T15:32:00+00:00",
+      "direction": "bearish",
+      "low": 4043.046,
+      "high": 4043.318,
       "status": "not subsequently touched by available bars"
     }
   ],
   "confirmed_m1_fractal_pivots_not_protected_swings": {
     "confirmed_fractal_highs": [
-      {
-        "time_utc": "2026-10-28T14:49:00+00:00",
-        "price": 4043.018
-      },
       {
         "time_utc": "2026-10-28T14:55:00+00:00",
         "price": 4042.201
@@ -68,6 +64,10 @@
       {
         "time_utc": "2026-10-28T15:21:00+00:00",
         "price": 4046.126
+      },
+      {
+        "time_utc": "2026-10-28T15:29:00+00:00",
+        "price": 4045.636
       }
     ],
     "confirmed_fractal_lows": [
@@ -98,13 +98,13 @@
     ]
   },
   "last_closed_5min": {
-    "start_utc": "2026-10-28T15:25:00+00:00",
-    "close_utc": "2026-10-28T15:30:00+00:00",
-    "open": 4044.752,
-    "high": 4045.636,
-    "low": 4044.086,
-    "close": 4045.548,
-    "age_minutes_at_generation": 2.0
+    "start_utc": "2026-10-28T15:30:00+00:00",
+    "close_utc": "2026-10-28T15:35:00+00:00",
+    "open": 4045.352,
+    "high": 4045.352,
+    "low": 4040.436,
+    "close": 4040.748,
+    "age_minutes_at_generation": 0.1
   },
   "recent_unrevisited_m5_fvg_candidates": [
     {
@@ -148,21 +148,10 @@
       "low": 4035.187,
       "high": 4035.675,
       "status": "not subsequently touched by available bars"
-    },
-    {
-      "formed_utc": "2026-10-28T15:05:00+00:00",
-      "direction": "bullish",
-      "low": 4042.201,
-      "high": 4042.835,
-      "status": "not subsequently touched by available bars"
     }
   ],
   "confirmed_fractal_pivots_not_protected_swings": {
     "confirmed_fractal_highs": [
-      {
-        "time_utc": "2026-10-28T10:00:00+00:00",
-        "price": 4055.808
-      },
       {
         "time_utc": "2026-10-28T10:45:00+00:00",
         "price": 4047.764
@@ -182,6 +171,10 @@
       {
         "time_utc": "2026-10-28T14:10:00+00:00",
         "price": 4049.895
+      },
+      {
+        "time_utc": "2026-10-28T15:20:00+00:00",
+        "price": 4046.126
       }
     ],
     "confirmed_fractal_lows": [
@@ -267,12 +260,12 @@
       "start_new_york": "2026-10-28T08:00:00-04:00",
       "end_new_york": "2026-10-28T15:00:00-04:00",
       "expected_m5_bars": 84,
-      "bars_seen": 42,
+      "bars_seen": 43,
       "status": "forming",
       "open": 4046.186,
       "high": 4059.916,
       "low": 4036.49,
-      "close": 4045.548
+      "close": 4040.748
     },
     "model_status": "study_only; unconfirmed without HTF key-level and CISD validation",
     "entry_signal": "NO TRADE (CISD, protected swing and >=2R entry not verified)",
