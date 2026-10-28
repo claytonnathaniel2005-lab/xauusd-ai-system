@@ -132,6 +132,137 @@ def quality_warnings(byint):
     return messages
 
 
+
+def session_candle_7h(m5, start_ny, end_ny, now):
+    """Assemble TTrades-style 7h bars from closed M5 candles, New York clock anchored."""
+    rows = [r for r in m5 if start_ny <= r['dt'].astimezone(NY) < end_ny]
+    result = {
+        'start_new_york': start_ny.isoformat(),
+        'end_new_york': end_ny.isoformat(),
+        'expected_m5_bars': 84,
+        'bars_seen': len(rows),
+        'status': 'not_started' if now.astimezone(NY) < start_ny
+                  else ('missing' if not rows
+                  else ('complete' if now.astimezone(NY) >= end_ny and len(rows) == 84
+                  else ('forming' if now.astimezone(NY) < end_ny else 'incomplete'))),
+    }
+    if rows:
+        result.update({'open': roundv(rows[0]['open']),
+                       'high': roundv(max(r['high'] for r in rows)),
+                       'low': roundv(min(r['low'] for r in rows)),
+                       'close': roundv(rows[-1]['close'])})
+    return result
+
+
+def ttrades_seven_hour_profile(m5, now):
+    """Read-only, rule-based candidate profile. Never asserts actual CISD or an entry."""
+    local_now = now.astimezone(NY)
+    # After 18:00 ET the next trading day's 18:00 candle has started.
+    session_day = local_now.date() + timedelta(days=1) if local_now.hour >= 18 else local_now.date()
+
+    def at(day, hour):
+        return datetime.combine(day, time(hour), NY)
+
+    asia = session_candle_7h(m5, at(session_day-timedelta(days=1), 18),
+                             at(session_day, 1), now)
+    london = session_candle_7h(m5, at(session_day, 1), at(session_day, 8), now)
+    new_york = session_candle_7h(m5, at(session_day, 8), at(session_day, 15), now)
+    result = {
+        'trading_day_new_york': str(session_day),
+        'timezone': 'America/New_York (automatically observes DST)',
+        'timeframe': 'synthetic 7-hour bars from CLOSED 5-minute candles',
+        'asia_18_00_et': asia, 'london_01_00_et': london,
+        'new_york_08_00_et': new_york,
+        'model_status': 'study_only; unconfirmed without HTF key-level and CISD validation',
+        'entry_signal': 'NO TRADE (CISD, protected swing and >=2R entry not verified)',
+        'invalidation_note': ('A TTrades 18:00/01:00 continuation profile needs the correct '
+                              'opposing swing and 01:00 candle close for its 50% invalidation. '
+                              'Those swings are NOT verified by generic fractal pivots.'),
+        'scenario_candidates': [],
+    }
+    if asia['status'] != 'complete' or london['status'] != 'complete':
+        result['stage'] = 'preliminary / wait for 01:00-08:00 ET London 7h candle close'
+        result['scenario_candidates'] = [
+            {'profile': 'Asia or London reversal -> NY continuation',
+             'requirement': 'Confirm meaningful HTF swing, London reaction and a real CISD on M5/M15.'},
+            {'profile': 'NY reversal / NY manipulation',
+             'requirement': 'Wait for NY to sweep a session range or reach an untouched HTF PD array, then confirm CISD.'},
+            {'profile': 'Seek and Destroy / NO TRADE',
+             'requirement': 'Watch for both-sided liquidity raids, failed expansions and nearby major news.'},
+        ]
+        return result
+
+    result['stage'] = 'London 7h closed; NY scenarios still conditional'
+    a, l = asia, london
+    # We only identify mechanical sweeps of the *7-hour* Asia candle range.
+    # This is NOT a validated sweep of a relevant D1 swing / PD array.
+    swept_high = l['high'] > a['high']
+    swept_low = l['low'] < a['low']
+    result['mechanical_observations'] = {
+        'london_took_asia_7h_high': swept_high,
+        'london_took_asia_7h_low': swept_low,
+        'london_range_equilibrium': roundv((l['high'] + l['low']) / 2),
+        'london_body_direction': ('up' if l['close'] > l['open'] else
+                                  'down' if l['close'] < l['open'] else 'flat'),
+    }
+
+    candidates = []
+    if swept_high and swept_low:
+        candidates.append({
+            'profile': 'Seek and Destroy warning / possible NY range',
+            'reason': 'London 7h traded through BOTH sides of Asia 7h range; this alone is not proof of chop.',
+            'ny_confirmation': 'Watch for failed directional breakouts and rotation toward London equilibrium.',
+            'action': 'NO TRADE until an independent directional HTF setup and CISD emerge.',
+        })
+    if swept_low and l['close'] > a['low'] and l['close'] > l['open']:
+        candidates.append({
+            'profile': 'Bullish London Reversal -> NY bullish continuation (candidate)',
+            'reason': 'London traded below Asia 7h low, reclaimed it, and finished up.',
+            'ny_confirmation': 'Require HTF support/swing context plus real bullish CISD; then NY higher-low continuation.',
+            'invalidation': 'Sustained trade below the London reversal low weakens the idea.',
+        })
+    if swept_high and l['close'] < a['high'] and l['close'] < l['open']:
+        candidates.append({
+            'profile': 'Bearish London Reversal -> NY bearish continuation (candidate)',
+            'reason': 'London traded above Asia 7h high, rejected, and finished down.',
+            'ny_confirmation': 'Require HTF resistance/swing context plus real bearish CISD; then NY lower-high continuation.',
+            'invalidation': 'Sustained trade above the London reversal high weakens the idea.',
+        })
+    if not swept_low and l['close'] > a['high'] and l['close'] > l['open']:
+        candidates.append({
+            'profile': 'Bullish Asia reversal / London expansion -> NY continuation (candidate)',
+            'reason': 'London expanded and closed above Asia 7h high without taking Asia 7h low.',
+            'ny_confirmation': 'NY should respect a valid structural pullback and continue higher; require CISD on LTF.',
+        })
+    if not swept_high and l['close'] < a['low'] and l['close'] < l['open']:
+        candidates.append({
+            'profile': 'Bearish Asia reversal / London expansion -> NY continuation (candidate)',
+            'reason': 'London expanded and closed below Asia 7h low without taking Asia 7h high.',
+            'ny_confirmation': 'NY should respect a valid structural pullback and continue lower; require CISD on LTF.',
+        })
+    if not swept_low and not swept_high:
+        candidates.append({
+            'profile': 'NY manipulation / NY reversal watch (candidate)',
+            'reason': 'London 7h stayed inside the Asia 7h range; NY may still seek liquidity on either side.',
+            'ny_confirmation': 'NY sweep of London/Asia high or low or untouched HTF PD array followed by CISD.',
+        })
+    if not candidates:
+        candidates.append({
+            'profile': 'Mixed London delivery; NY reversal or continuation unresolved',
+            'reason': 'London 7h range/close does not meet a clean mechanical profile.',
+            'ny_confirmation': 'Wait for HTF PD array engagement, session liquidity raid and M5/M15 CISD.',
+        })
+    # An NY reversal can remain a fallback even after London expansion IF NY reaches
+    # an untouched valid higher-timeframe level. That HTF validation is not automated.
+    candidates.append({
+        'profile': 'Alternative NY reversal watch',
+        'reason': 'Only applicable if London did NOT complete a valid reversal at a relevant HTF key level.',
+        'ny_confirmation': 'NY must reach/sweep the missing HTF level, reject, and print confirmed CISD.',
+    })
+    result['scenario_candidates'] = candidates
+    return result
+
+
 def main():
     if not API_KEY:
         raise RuntimeError('Set TWELVEDATA_API_KEY as a GitHub Actions repository secret.')
@@ -146,6 +277,7 @@ def main():
                   'materially from your OANDA/MT5 execution prices. D1 provider candle boundaries differ from UTC.'),
       'timeframes': {},
       'sessions': get_sessions(closed['5min'], now),
+      'ttrades_daily_profile': ttrades_seven_hour_profile(closed['5min'], now),
       'quality_warnings': quality_warnings(data),
       'trade_signal': 'none (confirmation not implemented)',
     }
