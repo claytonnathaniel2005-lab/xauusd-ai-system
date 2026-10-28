@@ -34,6 +34,14 @@ Version: 2026-10-28. Educational study notes from the user's supplied charts and
 - NY raids a range high (bearish possibility) or low (bullish possibility), then CISD and expansion away. 
 - Asia/ London range sweep + FVG alone is NOT a confirmation.
 
+### New York manipulation THEN reversal (explicit alternative, even after London appeared decisive)
+- NEVER assume New York must distribute in London's direction merely because London provisionally made its 7h high/low or reversed. A session extreme is not certified to be the daily extreme until hindsight.
+- Bullish NY manipulation → reversal: NY raids sell-side liquidity below London/Asia low, equal lows or inducement low, possibly taps HTF demand/bullish FVG/OB, then reclaims with bullish displacement plus closed M5/M15 CISD/MSS. Only then consider upside to opposing buy-side liquidity. Until then it is a WATCH, not confirmation.
+- Bearish NY manipulation → reversal: NY raids buy-side liquidity above London/Asia high, equal highs or inducement high, possibly taps HTF supply/bearish FVG/OB, then rejects with bearish displacement plus closed M5/M15 CISD/MSS. Only then consider downside to opposing sell-side liquidity.
+- Even when London already showed a reversal, this is a distinct plausible alternative that can invalidate the London→NY continuation thesis. NY must supply its own confirmation.
+- The 20:20 WIB post-London report MUST state BOTH (A) London continuation/distribution if structure holds, and (B) NY sweep→reversal alternative with liquidity to raid, required CISD, invalidation and target magnet, clearly marking unverified evidence.
+- Touching a zone, sweep wick or generic fractal is NOT sufficient. If NY has not swept/confirmed or market whipsaws: WAIT / NO TRADE.
+
 ### Seek and Destroy / NO TRADE
 - London or NY raids both sides of Asia/ranges and fails to follow through; price tends to whipsaw and seek range equilibrium.
 - Especially cautious ahead of major macro announcements such as FOMC.
