@@ -2,8 +2,14 @@ name: XAUUSD near-live price and M5 monitor
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - live.py
+      - render_site.py
+      - .github/workflows/xauusd-live.yml
   schedule:
-    - cron: '7,22,37,52 * * 1-5'       # Every 15 minutes on weekdays UTC
+    - cron: '7,22,37,52 * * * 1-5'       # Every 15 minutes on weekdays UTC
     - cron: '7,22,37,52 21-23 * * 0' # Sunday UTC at FX market reopening
 
 permissions:
