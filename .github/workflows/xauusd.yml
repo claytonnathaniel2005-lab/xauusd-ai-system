@@ -2,13 +2,6 @@ name: XAUUSD read-only candle snapshot
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - fetch.py
-      - live.py
-      - render_site.py
-      - .github/workflows/xauusd.yml
   schedule:
     - cron: '35 5 * * 1-5'        # Detailed 12:35 WIB
     - cron: '35 11 * * 1-5'       # Detailed 18:35 WIB
