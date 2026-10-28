@@ -1,18 +1,112 @@
 {
   "instrument": "XAU/USD",
   "provider": "Twelve Data",
-  "retrieved_utc": "2026-10-28T08:00:09.080407+00:00",
-  "latest_price": 4043.835,
+  "retrieved_utc": "2026-10-28T08:03:50.667366+00:00",
+  "latest_price": 4045.471,
   "quote_timestamp_utc": null,
   "quote_status": "retrieved_from_price_endpoint_timestamp_unknown",
+  "last_closed_1min": {
+    "start_utc": "2026-10-28T08:02:00+00:00",
+    "close_utc": "2026-10-28T08:03:00+00:00",
+    "open": 4043.997,
+    "high": 4046.29,
+    "low": 4043.997,
+    "close": 4046.056,
+    "age_minutes_at_generation": 0.8
+  },
+  "minute_data_status": "fresh_at_generation",
+  "recent_unrevisited_m1_fvg_candidates": [
+    {
+      "formed_utc": "2026-10-28T00:14:00+00:00",
+      "direction": "bearish",
+      "low": 4069.057,
+      "high": 4069.089,
+      "status": "not subsequently touched by available bars"
+    },
+    {
+      "formed_utc": "2026-10-28T00:15:00+00:00",
+      "direction": "bearish",
+      "low": 4068.089,
+      "high": 4068.251,
+      "status": "not subsequently touched by available bars"
+    },
+    {
+      "formed_utc": "2026-10-28T01:46:00+00:00",
+      "direction": "bearish",
+      "low": 4053.433,
+      "high": 4053.684,
+      "status": "not subsequently touched by available bars"
+    },
+    {
+      "formed_utc": "2026-10-28T07:04:00+00:00",
+      "direction": "bullish",
+      "low": 4030.039,
+      "high": 4030.042,
+      "status": "not subsequently touched by available bars"
+    }
+  ],
+  "confirmed_m1_fractal_pivots_not_protected_swings": {
+    "confirmed_fractal_highs": [
+      {
+        "time_utc": "2026-10-28T07:11:00+00:00",
+        "price": 4035.024
+      },
+      {
+        "time_utc": "2026-10-28T07:14:00+00:00",
+        "price": 4035.187
+      },
+      {
+        "time_utc": "2026-10-28T07:19:00+00:00",
+        "price": 4034.889
+      },
+      {
+        "time_utc": "2026-10-28T07:31:00+00:00",
+        "price": 4039.674
+      },
+      {
+        "time_utc": "2026-10-28T07:36:00+00:00",
+        "price": 4040.894
+      },
+      {
+        "time_utc": "2026-10-28T07:45:00+00:00",
+        "price": 4040.044
+      }
+    ],
+    "confirmed_fractal_lows": [
+      {
+        "time_utc": "2026-10-28T07:32:00+00:00",
+        "price": 4035.675
+      },
+      {
+        "time_utc": "2026-10-28T07:39:00+00:00",
+        "price": 4037.468
+      },
+      {
+        "time_utc": "2026-10-28T07:44:00+00:00",
+        "price": 4038.233
+      },
+      {
+        "time_utc": "2026-10-28T07:49:00+00:00",
+        "price": 4037.957
+      },
+      {
+        "time_utc": "2026-10-28T07:53:00+00:00",
+        "price": 4037.957
+      },
+      {
+        "time_utc": "2026-10-28T07:58:00+00:00",
+        "price": 4039.508
+      }
+    ]
+  },
   "last_closed_5min": {
     "start_utc": "2026-10-28T07:55:00+00:00",
     "close_utc": "2026-10-28T08:00:00+00:00",
     "open": 4038.74,
-    "high": 4042.988,
+    "high": 4043.999,
     "low": 4038.74,
-    "close": 4042.184,
-    "age_minutes_at_generation": 0.2
+    "close": 4043.595,
+    "age_minutes_at_generation": 3.8
   },
   "recent_unrevisited_m5_fvg_candidates": [
     {
@@ -48,13 +142,6 @@
       "direction": "bearish",
       "low": 4052.214,
       "high": 4052.614,
-      "status": "not subsequently touched by available bars"
-    },
-    {
-      "formed_utc": "2026-10-28T04:00:00+00:00",
-      "direction": "bearish",
-      "low": 4043.248,
-      "high": 4044.849,
       "status": "not subsequently touched by available bars"
     },
     {
@@ -137,7 +224,7 @@
     },
     "london_indicator_window_02_00_05_00_ET": {
       "status": "partial",
-      "high": 4042.988,
+      "high": 4043.999,
       "low": 4028.014,
       "bars_seen": 24,
       "start_ny": "2026-10-28T02:00:00-04:00",
@@ -169,9 +256,9 @@
       "bars_seen": 36,
       "status": "forming",
       "open": 4036.874,
-      "high": 4042.988,
+      "high": 4043.999,
       "low": 4028.014,
-      "close": 4042.184
+      "close": 4043.595
     },
     "new_york_08_00_et": {
       "start_new_york": "2026-10-28T08:00:00-04:00",
@@ -204,7 +291,8 @@
     "This is a delayed periodic snapshot, not a continuously streaming feed.",
     "Twelve Data /price does not return an exact tick timestamp. retrieved_utc is the REQUEST time, NOT the trade time.",
     "Provider quote is NOT an OANDA/MT5 executable bid/ask.",
-    "FVGs and session profiles are study candidates, not confirmed CISD or trade signals."
+    "FVGs and session profiles are study candidates, not confirmed CISD or trade signals.",
+    "M1 requires a CLOSED 1-minute candle and fresh retrieval; this is not a live streaming feed."
   ],
   "trade_signal": "NONE \u2014 no automated broker-level execution confirmation"
 }
