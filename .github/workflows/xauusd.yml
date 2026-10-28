@@ -59,16 +59,33 @@ jobs:
           python -m py_compile fetch.py
           python fetch.py
 
-      - name: Update derived report in repository
+      - name: Update derived report in repository (retry safely on branch changes)
         if: steps.session_gate.outputs.run == 'true'
         run: |
+          set -e
+          cp derived/latest.json "$RUNNER_TEMP/xauusd-latest.json"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add derived/latest.json
-          if ! git diff --cached --quiet; then
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p derived
+            cp "$RUNNER_TEMP/xauusd-latest.json" derived/latest.json
+            git add derived/latest.json
+            if git diff --cached --quiet; then
+              echo "Detailed report unchanged"
+              break
+            fi
             git commit -m "Refresh derived XAUUSD market report"
-            git push origin HEAD:main
-          fi
+            if git push origin HEAD:main; then
+              break
+            fi
+            if [ "$attempt" -eq 5 ]; then
+              echo "Failed to push full report after 5 attempts" >&2
+              exit 1
+            fi
+            sleep 2
+          done
 
       - uses: actions/configure-pages@v5
         if: steps.session_gate.outputs.run == 'true'
