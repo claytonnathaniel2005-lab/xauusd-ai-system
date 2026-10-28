@@ -1,23 +1,19 @@
 {
   "instrument": "XAU/USD",
   "provider": "Twelve Data",
-  "retrieved_utc": "2026-10-28T19:24:35.688537+00:00",
-  "on_demand_request": {
-    "request_id": "chat-20261028T192404Z",
-    "requested_utc": "2026-10-28T19:24:04+00:00",
-    "status": "trigger_recognized"
-  },
-  "latest_price": 4052.685,
+  "retrieved_utc": "2026-10-28T19:27:27.666948+00:00",
+  "on_demand_request": null,
+  "latest_price": 4052.849,
   "quote_timestamp_utc": null,
   "quote_status": "retrieved_from_price_endpoint_timestamp_unknown",
   "last_closed_1min": {
-    "start_utc": "2026-10-28T19:22:00+00:00",
-    "close_utc": "2026-10-28T19:23:00+00:00",
-    "open": 4049.572,
-    "high": 4053.443,
-    "low": 4049.572,
-    "close": 4052.852,
-    "age_minutes_at_generation": 1.6
+    "start_utc": "2026-10-28T19:26:00+00:00",
+    "close_utc": "2026-10-28T19:27:00+00:00",
+    "open": 4050.733,
+    "high": 4052.185,
+    "low": 4050.387,
+    "close": 4050.442,
+    "age_minutes_at_generation": 0.5
   },
   "minute_data_status": "fresh_at_generation",
   "recent_unrevisited_m1_fvg_candidates": [
@@ -39,10 +35,6 @@
   "confirmed_m1_fractal_pivots_not_protected_swings": {
     "confirmed_fractal_highs": [
       {
-        "time_utc": "2026-10-28T18:39:00+00:00",
-        "price": 4061.899
-      },
-      {
         "time_utc": "2026-10-28T18:45:00+00:00",
         "price": 4070.29
       },
@@ -61,6 +53,10 @@
       {
         "time_utc": "2026-10-28T19:17:00+00:00",
         "price": 4056.619
+      },
+      {
+        "time_utc": "2026-10-28T19:24:00+00:00",
+        "price": 4054.161
       }
     ],
     "confirmed_fractal_lows": [
@@ -91,13 +87,13 @@
     ]
   },
   "last_closed_5min": {
-    "start_utc": "2026-10-28T19:15:00+00:00",
-    "close_utc": "2026-10-28T19:20:00+00:00",
-    "open": 4045.534,
-    "high": 4056.619,
-    "low": 4042.527,
-    "close": 4042.794,
-    "age_minutes_at_generation": 4.6
+    "start_utc": "2026-10-28T19:20:00+00:00",
+    "close_utc": "2026-10-28T19:25:00+00:00",
+    "open": 4043.549,
+    "high": 4054.161,
+    "low": 4043.549,
+    "close": 4051.236,
+    "age_minutes_at_generation": 2.5
   },
   "recent_unrevisited_m5_fvg_candidates": [
     {
