@@ -45,3 +45,11 @@ Existing ChatGPT briefings remain at 13:00, 18:45 and 20:20 WIB. When asked for 
 - No page: verify Pages is set to **GitHub Actions**, repo Actions are enabled, and workflow succeeded.
 - Quote discrepancy: compare two feeds at matching UTC timestamps, ask Twelve Data support about the source, and prefer your execution broker's historical data for live entries.
 - Never expose API keys in source files, screenshots, browser addresses, workflow logs, or published artifacts.
+
+## On-demand ChatGPT refresh: matching a quote to the user's request
+
+This repository now supports a **user-requested GitHub workflow trigger** without exposing the Twelve Data API key. When the user asks ChatGPT for the current XAUUSD price, ChatGPT can use the connected GitHub app to update `refresh-requests/quote-refresh.json` on `main` with a unique `request_id` and UTC `requested_utc`, using a commit message beginning `Request XAUUSD quote refresh`. The push path on `.github/workflows/xauusd-live.yml` invokes `live.py` regardless of the delayed GitHub cron schedule.
+
+A successful on-demand report should contain `on_demand_request.request_id` matching the just-submitted ID, its `requested_utc`, and `retrieved_utc` after the request. ChatGPT should check the GitHub workflow run status and `derived/live.json` before making a price claim. A snapshot from a different run or one whose request ID does not match is **not** proof that the specific refresh request completed. Check whether the report has reached GitHub Pages separately; Pages may deploy after the repository data is committed.
+
+Interpret freshness conservatively: label a quote retrieval as **recent** only when it was requested after the user's question and the report is no more than about two minutes old when checked. If the run is queued, failed or delayed, say so rather than reporting an old quote as live. Never claim the timestamp equals the true Twelve Data tick time: the `/price` endpoint lacks that metadata. M1/M5 timestamps refer to last **closed** candles and may be older than `retrieved_utc`. A request can fail due to provider limits or GitHub queueing; do not poll indefinitely or retry aggressively. Never use a snapshot price as an OANDA/MT5 executable bid or ask.
