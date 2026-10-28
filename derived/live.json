@@ -1,19 +1,19 @@
 {
   "instrument": "XAU/USD",
   "provider": "Twelve Data",
-  "retrieved_utc": "2026-10-28T21:43:29.024460+00:00",
+  "retrieved_utc": "2026-10-28T22:24:04.970718+00:00",
   "on_demand_request": null,
-  "latest_price": 4067.686,
+  "latest_price": 4058.606,
   "quote_timestamp_utc": null,
   "quote_status": "retrieved_from_price_endpoint_timestamp_unknown",
   "last_closed_1min": {
-    "start_utc": "2026-10-28T21:41:00+00:00",
-    "close_utc": "2026-10-28T21:42:00+00:00",
-    "open": 4067.689,
-    "high": 4067.765,
-    "low": 4067.674,
-    "close": 4067.742,
-    "age_minutes_at_generation": 1.5
+    "start_utc": "2026-10-28T22:22:00+00:00",
+    "close_utc": "2026-10-28T22:23:00+00:00",
+    "open": 4059.593,
+    "high": 4059.593,
+    "low": 4058.768,
+    "close": 4058.927,
+    "age_minutes_at_generation": 1.1
   },
   "minute_data_status": "fresh_at_generation",
   "recent_unrevisited_m1_fvg_candidates": [
@@ -25,82 +25,82 @@
       "status": "not subsequently touched by available bars"
     },
     {
-      "formed_utc": "2026-10-28T20:42:00+00:00",
-      "direction": "bullish",
+      "formed_utc": "2026-10-28T22:12:00+00:00",
+      "direction": "bearish",
       "low": 4064.799,
-      "high": 4064.878,
+      "high": 4065.039,
       "status": "not subsequently touched by available bars"
     },
     {
-      "formed_utc": "2026-10-28T20:43:00+00:00",
-      "direction": "bullish",
-      "low": 4065.893,
-      "high": 4066.331,
+      "formed_utc": "2026-10-28T22:13:00+00:00",
+      "direction": "bearish",
+      "low": 4064.205,
+      "high": 4064.215,
       "status": "not subsequently touched by available bars"
     }
   ],
   "confirmed_m1_fractal_pivots_not_protected_swings": {
     "confirmed_fractal_highs": [
       {
-        "time_utc": "2026-10-28T21:02:00+00:00",
-        "price": 4068.017
-      },
-      {
-        "time_utc": "2026-10-28T21:10:00+00:00",
-        "price": 4067.918
-      },
-      {
-        "time_utc": "2026-10-28T21:15:00+00:00",
-        "price": 4067.819
-      },
-      {
-        "time_utc": "2026-10-28T21:21:00+00:00",
-        "price": 4068.017
-      },
-      {
-        "time_utc": "2026-10-28T21:26:00+00:00",
-        "price": 4067.886
-      },
-      {
         "time_utc": "2026-10-28T21:37:00+00:00",
         "price": 4067.906
+      },
+      {
+        "time_utc": "2026-10-28T21:46:00+00:00",
+        "price": 4067.813
+      },
+      {
+        "time_utc": "2026-10-28T21:55:00+00:00",
+        "price": 4068.232
+      },
+      {
+        "time_utc": "2026-10-28T22:03:00+00:00",
+        "price": 4069.887
+      },
+      {
+        "time_utc": "2026-10-28T22:07:00+00:00",
+        "price": 4067.852
+      },
+      {
+        "time_utc": "2026-10-28T22:17:00+00:00",
+        "price": 4063.719
       }
     ],
     "confirmed_fractal_lows": [
       {
-        "time_utc": "2026-10-28T20:47:00+00:00",
+        "time_utc": "2026-10-28T21:40:00+00:00",
+        "price": 4067.662
+      },
+      {
+        "time_utc": "2026-10-28T21:46:00+00:00",
         "price": 4067.521
       },
       {
-        "time_utc": "2026-10-28T20:57:00+00:00",
-        "price": 4067.123
-      },
-      {
-        "time_utc": "2026-10-28T21:04:00+00:00",
+        "time_utc": "2026-10-28T21:50:00+00:00",
         "price": 4067.521
       },
       {
-        "time_utc": "2026-10-28T21:10:00+00:00",
-        "price": 4067.615
+        "time_utc": "2026-10-28T21:56:00+00:00",
+        "price": 4067.85
       },
       {
-        "time_utc": "2026-10-28T21:19:00+00:00",
-        "price": 4067.504
+        "time_utc": "2026-10-28T22:00:00+00:00",
+        "price": 4067.686
       },
       {
-        "time_utc": "2026-10-28T21:36:00+00:00",
-        "price": 4067.521
+        "time_utc": "2026-10-28T22:05:00+00:00",
+        "price": 4063.405
       }
     ]
   },
   "last_closed_5min": {
-    "start_utc": "2026-10-28T21:35:00+00:00",
-    "close_utc": "2026-10-28T21:40:00+00:00",
-    "open": 4067.648,
-    "high": 4067.906,
-    "low": 4067.521,
-    "close": 4067.802,
-    "age_minutes_at_generation": 3.5
+    "start_utc": "2026-10-28T22:15:00+00:00",
+    "close_utc": "2026-10-28T22:20:00+00:00",
+    "open": 4063.389,
+    "high": 4063.719,
+    "low": 4060.584,
+    "close": 4060.767,
+    "age_minutes_at_generation": 4.1
   },
   "recent_unrevisited_m5_fvg_candidates": [
     {
@@ -130,25 +130,10 @@
       "low": 4015.644,
       "high": 4015.735,
       "status": "not subsequently touched by available bars"
-    },
-    {
-      "formed_utc": "2026-10-28T20:40:00+00:00",
-      "direction": "bullish",
-      "low": 4062.334,
-      "high": 4063.402,
-      "status": "not subsequently touched by available bars"
     }
   ],
   "confirmed_fractal_pivots_not_protected_swings": {
     "confirmed_fractal_highs": [
-      {
-        "time_utc": "2026-10-28T18:45:00+00:00",
-        "price": 4070.29
-      },
-      {
-        "time_utc": "2026-10-28T19:15:00+00:00",
-        "price": 4056.619
-      },
       {
         "time_utc": "2026-10-28T19:30:00+00:00",
         "price": 4062.398
@@ -164,6 +149,14 @@
       {
         "time_utc": "2026-10-28T21:20:00+00:00",
         "price": 4068.017
+      },
+      {
+        "time_utc": "2026-10-28T21:35:00+00:00",
+        "price": 4067.906
+      },
+      {
+        "time_utc": "2026-10-28T22:00:00+00:00",
+        "price": 4069.887
       }
     ],
     "confirmed_fractal_lows": [
@@ -220,65 +213,52 @@
     }
   },
   "ttrades_daily_profile": {
-    "trading_day_new_york": "2026-10-28",
+    "trading_day_new_york": "2026-10-29",
     "timezone": "America/New_York (automatically observes DST)",
     "timeframe": "synthetic 7-hour bars from CLOSED 5-minute candles",
     "asia_18_00_et": {
-      "start_new_york": "2026-10-27T18:00:00-04:00",
-      "end_new_york": "2026-10-28T01:00:00-04:00",
+      "start_new_york": "2026-10-28T18:00:00-04:00",
+      "end_new_york": "2026-10-29T01:00:00-04:00",
       "expected_m5_bars": 84,
-      "bars_seen": 84,
-      "status": "complete",
-      "open": 4058.124,
-      "high": 4070.17,
-      "low": 4036.63,
-      "close": 4036.689
+      "bars_seen": 4,
+      "status": "forming",
+      "open": 4067.993,
+      "high": 4069.887,
+      "low": 4060.584,
+      "close": 4060.767
     },
     "london_01_00_et": {
-      "start_new_york": "2026-10-28T01:00:00-04:00",
-      "end_new_york": "2026-10-28T08:00:00-04:00",
+      "start_new_york": "2026-10-29T01:00:00-04:00",
+      "end_new_york": "2026-10-29T08:00:00-04:00",
       "expected_m5_bars": 84,
-      "bars_seen": 84,
-      "status": "complete",
-      "open": 4036.874,
-      "high": 4057.684,
-      "low": 4028.014,
-      "close": 4046.466
+      "bars_seen": 0,
+      "status": "not_started"
     },
     "new_york_08_00_et": {
-      "start_new_york": "2026-10-28T08:00:00-04:00",
-      "end_new_york": "2026-10-28T15:00:00-04:00",
+      "start_new_york": "2026-10-29T08:00:00-04:00",
+      "end_new_york": "2026-10-29T15:00:00-04:00",
       "expected_m5_bars": 84,
-      "bars_seen": 84,
-      "status": "complete",
-      "open": 4046.186,
-      "high": 4070.29,
-      "low": 4029.63,
-      "close": 4041.473
+      "bars_seen": 0,
+      "status": "not_started"
     },
     "model_status": "study_only; unconfirmed without HTF key-level and CISD validation",
     "entry_signal": "NO TRADE (CISD, protected swing and >=2R entry not verified)",
     "invalidation_note": "A TTrades 18:00/01:00 continuation profile needs the correct opposing swing and 01:00 candle close for its 50% invalidation. Those swings are NOT verified by generic fractal pivots.",
     "scenario_candidates": [
       {
-        "profile": "Bullish London Reversal -> NY bullish continuation (candidate)",
-        "reason": "London traded below Asia 7h low, reclaimed it, and finished up.",
-        "ny_confirmation": "Require HTF support/swing context plus real bullish CISD; then NY higher-low continuation.",
-        "invalidation": "Sustained trade below the London reversal low weakens the idea."
+        "profile": "Asia or London reversal -> NY continuation",
+        "requirement": "Confirm meaningful HTF swing, London reaction and a real CISD on M5/M15."
       },
       {
-        "profile": "Alternative NY reversal watch",
-        "reason": "Only applicable if London did NOT complete a valid reversal at a relevant HTF key level.",
-        "ny_confirmation": "NY must reach/sweep the missing HTF level, reject, and print confirmed CISD."
+        "profile": "NY reversal / NY manipulation",
+        "requirement": "Wait for NY to sweep a session range or reach an untouched HTF PD array, then confirm CISD."
+      },
+      {
+        "profile": "Seek and Destroy / NO TRADE",
+        "requirement": "Watch for both-sided liquidity raids, failed expansions and nearby major news."
       }
     ],
-    "stage": "London 7h closed; NY scenarios still conditional",
-    "mechanical_observations": {
-      "london_took_asia_7h_high": false,
-      "london_took_asia_7h_low": true,
-      "london_range_equilibrium": 4042.849,
-      "london_body_direction": "up"
-    }
+    "stage": "preliminary / wait for 01:00-08:00 ET London 7h candle close"
   },
   "data_status": "fresh_at_generation",
   "warnings": [
