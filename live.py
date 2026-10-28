@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Near-live XAU/USD study snapshot; never publishes credentials or raw candles."""
 import json
+import os
 from datetime import datetime, timedelta
 from pathlib import Path
 from urllib.parse import urlencode
@@ -30,6 +31,34 @@ def get_latest_price():
     if not (0 < value < 100000):
         raise RuntimeError("Twelve Data /price is not a plausible XAU/USD number")
     return roundv(value)
+
+
+
+def on_demand_request_from_event():
+    """Correlate this snapshot with a specific ChatGPT-triggered repository push."""
+    if os.environ.get("GITHUB_EVENT_NAME") != "push":
+        return None
+    path = os.environ.get("GITHUB_EVENT_PATH")
+    if not path:
+        return None
+    try:
+        event = json.loads(Path(path).read_text(encoding="utf-8"))
+        commit = event.get("head_commit") or {}
+        changed = set(commit.get("added") or []) | set(commit.get("modified") or [])
+        if "refresh-requests/quote-refresh.json" not in changed:
+            return None
+        payload = json.loads(Path("refresh-requests/quote-refresh.json").read_text(encoding="utf-8"))
+        request_id, request_time = payload.get("request_id"), payload.get("requested_utc")
+        if not isinstance(request_id, str) or not isinstance(request_time, str):
+            return None
+        parsed = datetime.fromisoformat(request_time.replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            return None
+        return {"request_id": request_id,
+                "requested_utc": parsed.astimezone(UTC).isoformat(),
+                "status": "trigger_recognized"}
+    except (OSError, ValueError, TypeError, KeyError):
+        return None
 
 
 def main():
@@ -73,6 +102,7 @@ def main():
         "instrument": SYMBOL,
         "provider": "Twelve Data",
         "retrieved_utc": now.isoformat(),
+        "on_demand_request": on_demand_request_from_event(),
         "latest_price": None,
         "quote_timestamp_utc": None,
         "quote_status": "unavailable",
