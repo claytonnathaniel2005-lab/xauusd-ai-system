@@ -1,13 +1,21 @@
-
 name: XAUUSD read-only candle snapshot
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - fetch.py
+      - live.py
+      - render_site.py
+      - .github/workflows/xauusd.yml
   schedule:
-    - cron: '35 5 * * 1-5'
-    - cron: '35 11 * * 1-5'
-    - cron: '10 12 * * 1-5' # 08:10 ET during daylight saving
-    - cron: '10 13 * * 1-5' # 08:10 ET during standard time
+    - cron: '35 5 * * 1-5'        # Detailed 12:35 WIB
+    - cron: '35 11 * * 1-5'       # Detailed 18:35 WIB
+    - cron: '10 12 * * 1-5'       # Detailed post-London 08:10 ET (EDT)
+    - cron: '10 13 * * 1-5'       # Detailed post-London 08:10 ET (EST)
+    - cron: '7,22,37,52 * * 1-5' # Lightweight snapshot every 15 minutes, weekdays UTC
+    - cron: '7,22,37,52 21-23 * * 0' # Near Sunday market reopening UTC
 
 permissions:
   contents: write
@@ -16,7 +24,7 @@ permissions:
 
 concurrency:
   group: xauusd-pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -32,7 +40,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Gate post-London refresh by New York daylight time
+      - name: Determine snapshot mode and London daylight gate
         id: session_gate
         env:
           SCHEDULE_EVENT: ${{ github.event.schedule }}
@@ -43,28 +51,42 @@ jobs:
           from zoneinfo import ZoneInfo
           ny = datetime.now(timezone.utc).astimezone(ZoneInfo("America/New_York"))
           scheduled = os.environ.get("SCHEDULE_EVENT", "")
+          quick = scheduled in ("7,22,37,52 * * 1-5", "7,22,37,52 21-23 * * 0")
           post_london = scheduled in ("10 12 * * 1-5", "10 13 * * 1-5")
-          # Other scheduled runs and manual dispatch are always allowed.
           allowed = not post_london or ny.hour == 8
+          mode = "quick" if quick else "full"
           with open(os.environ["GITHUB_OUTPUT"], "a") as out:
               out.write("run=" + str(allowed).lower() + "\n")
-          print("NY time:", ny.isoformat(), "| Run data collection:", allowed)
+              out.write("mode=" + mode + "\n")
+          print("NY time:", ny.isoformat(), "| Mode:", mode, "| Collect:", allowed)
           PY
 
-      - name: Fetch XAUUSD candles
+      - name: Check Python syntax
         if: steps.session_gate.outputs.run == 'true'
+        run: python -m py_compile fetch.py live.py render_site.py
+
+      - name: Fetch complete XAUUSD multi-timeframe report
+        if: steps.session_gate.outputs.run == 'true' && steps.session_gate.outputs.mode == 'full'
         env:
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
-        run: |
-          python -m py_compile fetch.py
-          python fetch.py
+        run: python fetch.py
 
-      - name: Update derived report in repository
+      - name: Fetch lightweight quote and closed M5 report
+        if: steps.session_gate.outputs.run == 'true' && steps.session_gate.outputs.mode == 'quick'
+        env:
+          TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+        run: python live.py
+
+      - name: Build public read-only monitor
+        if: steps.session_gate.outputs.run == 'true'
+        run: python render_site.py
+
+      - name: Update derived reports in repository
         if: steps.session_gate.outputs.run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add derived/latest.json
+          git add -A derived
           if ! git diff --cached --quiet; then
             git commit -m "Refresh derived XAUUSD market report"
             git push origin HEAD:main
