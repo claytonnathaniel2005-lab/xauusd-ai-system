@@ -9,7 +9,8 @@ on:
       - render_site.py
       - .github/workflows/xauusd-live.yml
   schedule:
-    - cron: '7,22,37,52 * * * 1-5'       # Every 15 minutes on weekdays UTC
+    - cron: '2-59/5 4-16 * * 1-5'     # Every 5 minutes during 11:00-23:59 WIB weekdays
+    - cron: '7,22,37,52 0-3,17-23 * * 1-5' # Every 15 minutes at other weekday hours
     - cron: '7,22,37,52 21-23 * * 0' # Sunday UTC at FX market reopening
 
 permissions:
@@ -37,7 +38,7 @@ jobs:
       - name: Validate Python source
         run: python -m py_compile fetch.py live.py render_site.py
 
-      - name: Fetch latest quote and closed M5 candles
+      - name: Fetch latest quote and closed M1/M5 candles
         env:
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
         run: python live.py
