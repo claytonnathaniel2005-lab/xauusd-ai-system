@@ -1,23 +1,19 @@
 {
   "instrument": "XAU/USD",
   "provider": "Twelve Data",
-  "retrieved_utc": "2026-10-28T23:12:21.413122+00:00",
-  "on_demand_request": {
-    "request_id": "chat-20261028T231157Z",
-    "requested_utc": "2026-10-28T23:11:57+00:00",
-    "status": "trigger_recognized"
-  },
-  "latest_price": 4056.795,
+  "retrieved_utc": "2026-10-28T23:12:43.758798+00:00",
+  "on_demand_request": null,
+  "latest_price": 4055.643,
   "quote_timestamp_utc": null,
   "quote_status": "retrieved_from_price_endpoint_timestamp_unknown",
   "last_closed_1min": {
-    "start_utc": "2026-10-28T23:10:00+00:00",
-    "close_utc": "2026-10-28T23:11:00+00:00",
-    "open": 4053.639,
-    "high": 4054.538,
-    "low": 4053.639,
-    "close": 4054.439,
-    "age_minutes_at_generation": 1.4
+    "start_utc": "2026-10-28T23:11:00+00:00",
+    "close_utc": "2026-10-28T23:12:00+00:00",
+    "open": 4054.299,
+    "high": 4056.006,
+    "low": 4054.299,
+    "close": 4055.43,
+    "age_minutes_at_generation": 0.7
   },
   "minute_data_status": "fresh_at_generation",
   "recent_unrevisited_m1_fvg_candidates": [
@@ -47,6 +43,13 @@
       "direction": "bullish",
       "low": 4052.734,
       "high": 4052.763,
+      "status": "not subsequently touched by available bars"
+    },
+    {
+      "formed_utc": "2026-10-28T23:11:00+00:00",
+      "direction": "bullish",
+      "low": 4054.293,
+      "high": 4054.299,
       "status": "not subsequently touched by available bars"
     }
   ],
@@ -111,7 +114,7 @@
     "high": 4054.293,
     "low": 4052.2,
     "close": 4054.131,
-    "age_minutes_at_generation": 2.4
+    "age_minutes_at_generation": 2.7
   },
   "recent_unrevisited_m5_fvg_candidates": [
     {
