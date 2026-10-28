@@ -1,19 +1,23 @@
 {
   "instrument": "XAU/USD",
   "provider": "Twelve Data",
-  "retrieved_utc": "2026-10-28T09:02:16.201262+00:00",
-  "on_demand_request": null,
-  "latest_price": 4052.192,
+  "retrieved_utc": "2026-10-28T09:03:05.671857+00:00",
+  "on_demand_request": {
+    "request_id": "chat-20261028T090208Z",
+    "requested_utc": "2026-10-28T09:02:08+00:00",
+    "status": "trigger_recognized"
+  },
+  "latest_price": 4052.685,
   "quote_timestamp_utc": null,
   "quote_status": "retrieved_from_price_endpoint_timestamp_unknown",
   "last_closed_1min": {
-    "start_utc": "2026-10-28T09:00:00+00:00",
-    "close_utc": "2026-10-28T09:01:00+00:00",
-    "open": 4055.787,
-    "high": 4055.787,
-    "low": 4052.356,
-    "close": 4052.693,
-    "age_minutes_at_generation": 1.3
+    "start_utc": "2026-10-28T09:01:00+00:00",
+    "close_utc": "2026-10-28T09:02:00+00:00",
+    "open": 4053.246,
+    "high": 4053.246,
+    "low": 4052.24,
+    "close": 4052.4,
+    "age_minutes_at_generation": 1.1
   },
   "minute_data_status": "fresh_at_generation",
   "recent_unrevisited_m1_fvg_candidates": [
@@ -37,14 +41,17 @@
       "low": 4049.964,
       "high": 4049.99,
       "status": "not subsequently touched by available bars"
+    },
+    {
+      "formed_utc": "2026-10-28T09:01:00+00:00",
+      "direction": "bearish",
+      "low": 4053.246,
+      "high": 4053.334,
+      "status": "not subsequently touched by available bars"
     }
   ],
   "confirmed_m1_fractal_pivots_not_protected_swings": {
     "confirmed_fractal_highs": [
-      {
-        "time_utc": "2026-10-28T07:45:00+00:00",
-        "price": 4040.044
-      },
       {
         "time_utc": "2026-10-28T08:05:00+00:00",
         "price": 4048.419
@@ -64,6 +71,10 @@
       {
         "time_utc": "2026-10-28T08:54:00+00:00",
         "price": 4057.289
+      },
+      {
+        "time_utc": "2026-10-28T08:59:00+00:00",
+        "price": 4056.327
       }
     ],
     "confirmed_fractal_lows": [
@@ -100,7 +111,7 @@
     "high": 4057.018,
     "low": 4053.334,
     "close": 4054.1,
-    "age_minutes_at_generation": 2.3
+    "age_minutes_at_generation": 3.1
   },
   "recent_unrevisited_m5_fvg_candidates": [
     {
