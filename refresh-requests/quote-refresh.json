@@ -1,6 +1,6 @@
 {
-  "request_id": "chat-20261028T225811Z",
-  "requested_utc": "2026-10-28T22:58:11Z",
-  "reason": "Latest XAUUSD nearest liquidity magnet and FVG directional target",
-  "note": "Market data refresh only; no trading execution or credentials."
+  "request_id": "chat-20261028T230506Z",
+  "requested_utc": "2026-10-28T23:05:06Z",
+  "reason": "Latest XAUUSD intraday directional bias, structure and liquidity after Asia open",
+  "note": "Market data only; no order execution."
 }
