@@ -33,11 +33,14 @@ Use your OANDA/MT5 quote for execution.</p>
 <div class="grid">
 <section class="card"><h2>Latest available quote</h2><div class="big" id="quote">Loading...</div>
 <p class="muted" id="retrieved"></p><p class="warning" id="age"></p></section>
+<section class="card"><h2>Last closed 1-minute candle</h2><div class="big" id="m1">Loading...</div>
+<p class="muted" id="minuteclosed"></p></section>
 <section class="card"><h2>Last closed 5-minute candle</h2><div class="big" id="m5">Loading...</div>
 <p class="muted" id="closed"></p></section>
 </div>
 <section class="card"><h2>Asia / London / New York 7-hour profiles</h2>
 <pre id="session">Loading...</pre></section>
+<section class="card"><h2>Recent M1 FVG candidates</h2><pre id="m1fvg">Loading...</pre></section>
 <section class="card"><h2>Recent M5 FVG candidates</h2><pre id="fvg">Loading...</pre></section>
 <p><a href="live.json">Latest near-live data JSON</a> • <a href="latest.json">Detailed multi-timeframe JSON</a></p>
 <p class="muted">The quote API provides request time but not exact tick time. Price, FVGs and session ranges can differ from your broker.</p>
@@ -52,7 +55,10 @@ async function refresh(){
    $("quote").textContent = d.latest_price === null ? "Unavailable" : "$"+Number(d.latest_price).toFixed(3);
    $("retrieved").textContent = "API request: "+formatUTC(d.retrieved_utc)+" • Price tick time: unknown";
    const mins = (Date.now()-new Date(d.retrieved_utc).getTime())/60000;
-   $("age").textContent = Number.isFinite(mins) ? "Snapshot age: "+Math.max(0,Math.round(mins))+" minutes"+(mins>20?" — STALE":"") : "Snapshot age unknown";
+   $("age").textContent = Number.isFinite(mins) ? "Snapshot age: "+Math.max(0,Math.round(mins))+" minutes"+(mins>10?" — STALE":"") : "Snapshot age unknown";
+   $("m1").textContent = d.last_closed_1min?.close ?? "Unavailable";
+   $("minuteclosed").textContent = "M1 closed: "+formatUTC(d.last_closed_1min?.close_utc)+" • "+(d.minute_data_status||"unavailable");
+   $("m1fvg").textContent=JSON.stringify(d.recent_unrevisited_m1_fvg_candidates||[],null,2);
    $("m5").textContent = d.last_closed_5min?.close ?? "Unavailable";
    $("closed").textContent = "M5 closed: "+formatUTC(d.last_closed_5min?.close_utc);
    const p=d.ttrades_daily_profile||{};
