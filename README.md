@@ -19,7 +19,16 @@ The first Twelve Data screenshot returned `status: ok`, but the user’s OANDA c
 
 ## Schedule and limits
 
-GitHub Actions is scheduled for 12:35 WIB and 18:35 WIB, weekdays. Cron is UTC. Each run makes **five** `/time_series` requests (one symbol each): five credits if standard Twelve Data pricing applies. This stays within an 8-credit-per-minute limit provided no other keys/apps are simultaneously consuming your allowance. GitHub scheduled jobs can start late. Your existing ChatGPT daily briefing runs approximately at 13:00 WIB; its scheduling can also vary.
+The **detailed** snapshots run at 12:35 WIB, 18:35 WIB, and around 08:10 America/New_York (19:10 WIB in EDT / 20:10 WIB in EST) on weekdays. The **lightweight** `live.py` snapshot is scheduled every **15 minutes** on weekday UTC clocks, plus Sunday late UTC around the market reopening. All schedules use GitHub Actions cron, which **can run late or occasionally skip**, and do not represent a real-time feed.
+
+The lightweight job requests 1000 recent XAU/USD M5 candles (1 API credit) and attempts a latest-price quote through Twelve Data `/price` (1 API credit). It records the last CLOSED M5 timestamp, FVG candidates and session profiles in `derived/live.json`, while the request-time-only quote is explicitly marked **exact tick timestamp unknown**. The full job makes five `/time_series` calls. Rough planning estimate is approximately **200–220 credits per active weekday**, depending on scheduled jobs and available instruments; check your individual Twelve Data plan, quota, licensing terms and actual consumption. The new quote endpoint may be unavailable under some entitlements; the M5 report can still succeed. This remains **not an OANDA/MT5 tradable bid/ask**. Use the broker quote for entries, and do not assume a 15-minute GitHub schedule guarantees 15-minute freshness.
+
+Published read-only files:
+- `/latest.json` — detailed but less-frequent D1/H4/H1/M15/M5 report.
+- `/live.json` — faster quote request plus latest CLOSED M5, 7-hour sessions and study-only recent M5 FVGs.
+- `/` — browser dashboard displaying source timestamps and marking old snapshots stale. The page polls the published JSON every 60 seconds; this does **not** bypass GitHub's refresh delay.
+
+Existing ChatGPT briefings remain at 13:00, 18:45 and 20:20 WIB. When asked for the current price, ChatGPT should attempt `derived/live.json`, verify its freshness, and separately search for a current timestamped public quote if needed. Without a broker/market-data app supporting live API calls, neither ChatGPT nor GitHub Pages can promise streaming tick prices.
 
 ## What the summary does and does not mean
 
