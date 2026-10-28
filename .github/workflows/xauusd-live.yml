@@ -8,6 +8,7 @@ on:
       - live.py
       - render_site.py
       - .github/workflows/xauusd-live.yml
+      - refresh-requests/quote-refresh.json # ChatGPT on-demand refresh trigger
   schedule:
     - cron: '2-59/5 4-16 * * 1-5'     # Every 5 minutes during 11:00-23:59 WIB weekdays
     - cron: '7,22,37,52 0-3,17-23 * * 1-5' # Every 15 minutes at other weekday hours
