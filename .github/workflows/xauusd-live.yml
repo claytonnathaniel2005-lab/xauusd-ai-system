@@ -46,15 +46,33 @@ jobs:
       - name: Build public near-live dashboard
         run: python render_site.py
 
-      - name: Commit derived near-live study report
+      - name: Commit derived near-live study report (retry safely on branch changes)
         run: |
+          set -e
+          cp derived/live.json "$RUNNER_TEMP/xauusd-live.json"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add derived/live.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Refresh derived near-live XAUUSD price and M5 report"
-            git push origin HEAD:main
-          fi
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p derived
+            cp "$RUNNER_TEMP/xauusd-live.json" derived/live.json
+            git add derived/live.json
+            if git diff --cached --quiet; then
+              echo "Near-live report unchanged"
+              break
+            fi
+            git commit -m "Refresh derived near-live XAUUSD M1/M5 report"
+            if git push origin HEAD:main; then
+              echo "Near-live report saved successfully"
+              break
+            fi
+            if [ "$attempt" -eq 5 ]; then
+              echo "Failed to push after 5 attempts" >&2
+              exit 1
+            fi
+            sleep 2
+          done
 
       - uses: actions/configure-pages@v5
 
