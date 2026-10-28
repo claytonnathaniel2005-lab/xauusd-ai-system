@@ -47,7 +47,7 @@ jobs:
           # Other scheduled runs and manual dispatch are always allowed.
           allowed = not post_london or ny.hour == 8
           with open(os.environ["GITHUB_OUTPUT"], "a") as out:
-              out.write("run=" + str(allowed).lower() + "\\n")
+              out.write("run=" + str(allowed).lower() + "\n")
           print("NY time:", ny.isoformat(), "| Run data collection:", allowed)
           PY
 
