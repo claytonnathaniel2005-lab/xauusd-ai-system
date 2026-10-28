@@ -35,17 +35,18 @@ def get_latest_price():
 
 
 def on_demand_request_from_event():
-    """Correlate this snapshot with a specific ChatGPT-triggered repository push."""
+    """Associate the quote snapshot with the actual triggering request commit."""
     if os.environ.get("GITHUB_EVENT_NAME") != "push":
         return None
-    path = os.environ.get("GITHUB_EVENT_PATH")
-    if not path:
-        return None
     try:
-        event = json.loads(Path(path).read_text(encoding="utf-8"))
-        commit = event.get("head_commit") or {}
-        changed = set(commit.get("added") or []) | set(commit.get("modified") or [])
-        if "refresh-requests/quote-refresh.json" not in changed:
+        # Checkout uses the triggering commit SHA, so this works even when GitHub's
+        # push event payload omits a detailed changed-file list.
+        import subprocess
+        subject = subprocess.run(
+            ["git", "log", "-1", "--format=%s"],
+            check=True, capture_output=True, text=True, timeout=5
+        ).stdout.strip()
+        if not subject.startswith("Request XAUUSD quote refresh"):
             return None
         payload = json.loads(Path("refresh-requests/quote-refresh.json").read_text(encoding="utf-8"))
         request_id, request_time = payload.get("request_id"), payload.get("requested_utc")
@@ -57,9 +58,8 @@ def on_demand_request_from_event():
         return {"request_id": request_id,
                 "requested_utc": parsed.astimezone(UTC).isoformat(),
                 "status": "trigger_recognized"}
-    except (OSError, ValueError, TypeError, KeyError):
+    except (OSError, ValueError, TypeError, subprocess.SubprocessError):
         return None
-
 
 def main():
     if not API_KEY:
