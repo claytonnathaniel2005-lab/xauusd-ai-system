@@ -171,7 +171,13 @@ def main():
                 'low':roundv(min(r['low'] for r in prev)), 'note':'UTC calendar day, NOT necessarily broker PDH/PDL'}
     site = Path('site')
     site.mkdir(exist_ok=True)
-    (site / 'latest.json').write_text(json.dumps(summary,indent=2),encoding='utf-8')
+    snapshot_json = json.dumps(summary, indent=2)
+    (site / 'latest.json').write_text(snapshot_json, encoding='utf-8')
+    # Also retain derived-only market summary in repo so connected readers
+    # can fetch it independently of GitHub Pages.
+    derived = Path('derived')
+    derived.mkdir(exist_ok=True)
+    (derived / 'latest.json').write_text(snapshot_json, encoding='utf-8')
     (site / 'index.html').write_text('''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>XAU/USD study snapshot</title><style>body{background:#101820;color:#e5edf6;font:16px system-ui;margin:auto;max-width:900px;padding:28px}pre{white-space:pre-wrap;word-break:break-word;background:#1d2939;padding:20px;border-radius:10px}a{color:#8cbcff}</style><h1>XAU/USD read-only market snapshot</h1><p>Derived levels for study only. Not a live trading signal. <a href="latest.json">Raw summary JSON</a></p><pre id="out">Loading...</pre><script>fetch('latest.json').then(r=>r.json()).then(d=>document.getElementById('out').textContent=JSON.stringify(d,null,2)).catch(()=>document.getElementById('out').textContent='Could not load the latest snapshot.')</script></html>''',encoding='utf-8')
     print('Wrote read-only derived study snapshot to site/. No API key or raw OHLC history published.')
 
