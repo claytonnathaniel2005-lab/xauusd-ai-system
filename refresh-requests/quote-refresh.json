@@ -1,6 +1,6 @@
 {
-  "request_id": "pre-ny-20261029T114912Z",
-  "requested_utc": "2026-10-29T11:49:12Z",
-  "reason": "Scheduled pre-New-York XAUUSD briefing; refresh stale quote and closed M1/M5 candles",
-  "note": "Market data refresh only; no order execution or credentials"
+  "request_id": "post-london-20261029-2020wib",
+  "requested_utc": "2026-10-29T13:20:53Z",
+  "reason": "20:20 WIB post-London profile freshness check; latest M1/M5 and NY magnet zones",
+  "note": "Market data only; no order execution."
 }
