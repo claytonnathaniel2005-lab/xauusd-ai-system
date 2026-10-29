@@ -1,6 +1,6 @@
 {
-  "request_id": "chat-20261029T110557Z",
-  "requested_utc": "2026-10-29T11:05:57Z",
-  "reason": "Latest XAUUSD support resistance break versus sweep scenarios",
-  "note": "Read-only market data; no order execution."
+  "request_id": "pre-ny-20261029T114912Z",
+  "requested_utc": "2026-10-29T11:49:12Z",
+  "reason": "Scheduled pre-New-York XAUUSD briefing; refresh stale quote and closed M1/M5 candles",
+  "note": "Market data refresh only; no order execution or credentials"
 }
