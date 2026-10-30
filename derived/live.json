@@ -1,29 +1,22 @@
 {
   "instrument": "XAU/USD",
   "provider": "Twelve Data",
-  "retrieved_utc": "2026-10-30T13:21:36.116365+00:00",
+  "retrieved_utc": "2026-10-30T13:24:21.674561+00:00",
   "on_demand_request": null,
-  "latest_price": 3944.151,
+  "latest_price": 3946.486,
   "quote_timestamp_utc": null,
   "quote_status": "retrieved_from_price_endpoint_timestamp_unknown",
   "last_closed_1min": {
-    "start_utc": "2026-10-30T13:20:00+00:00",
-    "close_utc": "2026-10-30T13:21:00+00:00",
-    "open": 3943.999,
-    "high": 3944.481,
-    "low": 3943.684,
-    "close": 3943.734,
-    "age_minutes_at_generation": 0.6
+    "start_utc": "2026-10-30T13:22:00+00:00",
+    "close_utc": "2026-10-30T13:23:00+00:00",
+    "open": 3944.494,
+    "high": 3947.024,
+    "low": 3944.494,
+    "close": 3946.23,
+    "age_minutes_at_generation": 1.4
   },
   "minute_data_status": "fresh_at_generation",
   "recent_unrevisited_m1_fvg_candidates": [
-    {
-      "formed_utc": "2026-10-30T09:06:00+00:00",
-      "direction": "bearish",
-      "low": 3995.365,
-      "high": 3995.499,
-      "status": "not subsequently touched by available bars"
-    },
     {
       "formed_utc": "2026-10-30T10:12:00+00:00",
       "direction": "bearish",
@@ -71,6 +64,13 @@
       "direction": "bearish",
       "low": 3952.902,
       "high": 3953.499,
+      "status": "not subsequently touched by available bars"
+    },
+    {
+      "formed_utc": "2026-10-30T13:22:00+00:00",
+      "direction": "bullish",
+      "low": 3944.481,
+      "high": 3944.494,
       "status": "not subsequently touched by available bars"
     }
   ],
@@ -135,7 +135,7 @@
     "high": 3948.256,
     "low": 3941.021,
     "close": 3944.412,
-    "age_minutes_at_generation": 1.6
+    "age_minutes_at_generation": 4.4
   },
   "recent_unrevisited_m5_fvg_candidates": [
     {
