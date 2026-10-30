@@ -1,36 +1,32 @@
 {
   "instrument": "XAU/USD",
-  "generated_utc": "2026-10-30T12:14:56.158756+00:00",
+  "generated_utc": "2026-10-30T12:57:18.888515+00:00",
   "provider": "Twelve Data",
   "warning": "DATA REVIEW ONLY. Not an executable trading signal; the Twelve Data feed may differ materially from your OANDA/MT5 execution prices. D1 provider candle boundaries differ from UTC.",
   "timeframes": {
     "5min": {
       "bars_returned": 1000,
-      "last_bar_timestamp": "2026-10-30T12:05:00+00:00",
-      "last_bar_close": 3965.576,
-      "last_bar_high": 3966.051,
-      "last_bar_low": 3963.372,
+      "last_bar_timestamp": "2026-10-30T12:50:00+00:00",
+      "last_bar_close": 3954.889,
+      "last_bar_high": 3958.878,
+      "last_bar_low": 3954.601,
       "candle_status": "closed by UTC bar duration",
       "pivots": {
         "confirmed_fractal_highs": [
           {
-            "time_utc": "2026-10-30T09:50:00+00:00",
-            "price": 3993.451
-          },
-          {
-            "time_utc": "2026-10-30T11:05:00+00:00",
-            "price": 3981.843
-          },
-          {
             "time_utc": "2026-10-30T11:35:00+00:00",
             "price": 3979.3
+          },
+          {
+            "time_utc": "2026-10-30T12:10:00+00:00",
+            "price": 3968.235
+          },
+          {
+            "time_utc": "2026-10-30T12:35:00+00:00",
+            "price": 3969.829
           }
         ],
         "confirmed_fractal_lows": [
-          {
-            "time_utc": "2026-10-30T09:50:00+00:00",
-            "price": 3986.455
-          },
           {
             "time_utc": "2026-10-30T10:50:00+00:00",
             "price": 3974.721
@@ -38,6 +34,10 @@
           {
             "time_utc": "2026-10-30T11:25:00+00:00",
             "price": 3967.277
+          },
+          {
+            "time_utc": "2026-10-30T12:15:00+00:00",
+            "price": 3959.857
           }
         ]
       },
@@ -64,20 +64,20 @@
           "status": "not subsequently touched by available bars"
         },
         {
-          "formed_utc": "2026-10-30T12:00:00+00:00",
+          "formed_utc": "2026-10-30T12:45:00+00:00",
           "direction": "bearish",
-          "low": 3966.567,
-          "high": 3967.782,
+          "low": 3959.455,
+          "high": 3962.436,
           "status": "not subsequently touched by available bars"
         }
       ]
     },
     "15min": {
       "bars_returned": 480,
-      "last_bar_timestamp": "2026-10-30T11:45:00+00:00",
-      "last_bar_close": 3966.751,
-      "last_bar_high": 3971.573,
-      "last_bar_low": 3965.107,
+      "last_bar_timestamp": "2026-10-30T12:30:00+00:00",
+      "last_bar_close": 3956.192,
+      "last_bar_high": 3969.829,
+      "last_bar_low": 3955.696,
       "candle_status": "closed by UTC bar duration",
       "pivots": {
         "confirmed_fractal_highs": [
@@ -228,9 +228,9 @@
     "1day": {
       "bars_returned": 100,
       "last_bar_timestamp": "2026-10-30T00:00:00+00:00",
-      "last_bar_close": 3963.233,
+      "last_bar_close": 3955.989,
       "last_bar_high": 4030.795,
-      "last_bar_low": 3962.741,
+      "last_bar_low": 3954.601,
       "candle_status": "UNVERIFIED: daily provider boundary",
       "pivots": {
         "confirmed_fractal_highs": [
@@ -315,12 +315,12 @@
       "start_new_york": "2026-10-30T08:00:00-04:00",
       "end_new_york": "2026-10-30T15:00:00-04:00",
       "expected_m5_bars": 84,
-      "bars_seen": 2,
+      "bars_seen": 11,
       "status": "forming",
       "open": 3966.567,
-      "high": 3966.567,
-      "low": 3963.372,
-      "close": 3965.576
+      "high": 3969.829,
+      "low": 3954.601,
+      "close": 3954.889
     },
     "model_status": "study_only; unconfirmed without HTF key-level and CISD validation",
     "entry_signal": "NO TRADE (CISD, protected swing and >=2R entry not verified)",
