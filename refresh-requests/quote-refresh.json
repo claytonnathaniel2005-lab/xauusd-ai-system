@@ -1,6 +1,6 @@
 {
-  "request_id": "pre-ny-20261103T114950Z",
-  "requested_utc": "2026-11-03T11:49:50Z",
-  "reason": "Market-data-only fresh XAUUSD quote and closed candle verification; no execution",
-  "note": "Data only, no order execution."
+  "request_id": "london-close-20261103T132113927Z",
+  "requested_utc": "2026-11-03T13:21:13.927Z",
+  "reason": "Market-data-only XAUUSD fresh quote and closed M1/M5 verification; no execution",
+  "note": "Data only; no orders"
 }
