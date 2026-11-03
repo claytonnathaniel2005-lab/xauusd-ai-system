@@ -1,6 +1,6 @@
 {
-  "request_id": "daily-xauusd-bias-20261103T062048268Z",
-  "requested_utc": "2026-11-03T06:20:48.268Z",
-  "reason": "Market-data-only fresh XAUUSD quote and closed candle verification for scheduled daily bias; no trading execution",
+  "request_id": "pre-ny-20261103T114950Z",
+  "requested_utc": "2026-11-03T11:49:50Z",
+  "reason": "Market-data-only fresh XAUUSD quote and closed candle verification; no execution",
   "note": "Data only, no order execution."
 }
