@@ -1,6 +1,6 @@
 {
-  "request_id": "london-close-20261030T132035Z",
-  "requested_utc": "2026-10-30T13:20:35Z",
-  "reason": "Scheduled London close New York XAUUSD near-live quote and M1/M5 refresh",
-  "note": "Market data only; no order execution or credentials"
+  "request_id": "notification-freshness-test-20261103T022128Z",
+  "requested_utc": "2026-11-03T02:21:28Z",
+  "reason": "Verify fresh quote path for scheduled XAUUSD notifications; do not send stale price",
+  "note": "Data only, no order execution."
 }
