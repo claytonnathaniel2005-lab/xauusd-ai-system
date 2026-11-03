@@ -1,6 +1,6 @@
 {
-  "request_id": "notification-freshness-test-20261103T022128Z",
-  "requested_utc": "2026-11-03T02:21:28Z",
-  "reason": "Verify fresh quote path for scheduled XAUUSD notifications; do not send stale price",
+  "request_id": "daily-xauusd-bias-20261103T062048268Z",
+  "requested_utc": "2026-11-03T06:20:48.268Z",
+  "reason": "Market-data-only fresh XAUUSD quote and closed candle verification for scheduled daily bias; no trading execution",
   "note": "Data only, no order execution."
 }
