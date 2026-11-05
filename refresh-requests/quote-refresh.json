@@ -1,6 +1,6 @@
 {
-  "request_id": "pre-new-york-20261104T114933572Z",
-  "requested_utc": "2026-11-04T11:49:33.572Z",
-  "reason": "Market-data-only XAUUSD fresh quote and closed M1/M5 verification; no execution",
+  "request_id": "daily-bias-20261105T062653Z",
+  "requested_utc": "2026-11-05T06:26:53Z",
+  "reason": "Market-data-only XAUUSD quote and closed M1/M5 refresh; no execution",
   "note": "Data only; no orders"
 }
