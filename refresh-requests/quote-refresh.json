@@ -1,6 +1,6 @@
 {
-  "request_id": "pre-ny-2026-11-11T11:46:12.988Z",
-  "requested_utc": "2026-11-11T11:46:12.988Z",
+  "request_id": "london-close-nyc-2026-11-11T13:22:24.582Z",
+  "requested_utc": "2026-11-11T13:22:24.582Z",
   "reason": "Market-data-only XAUUSD reference quote and closed M1/M5 refresh; no orders",
   "note": "Data only; no execution"
 }
