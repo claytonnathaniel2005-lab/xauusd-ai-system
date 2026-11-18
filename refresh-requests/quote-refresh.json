@@ -1,5 +1,5 @@
 {
-  "request_id": "pre-new-york-xauusd-bias-2026-11-18T11:45:07.514Z",
-  "requested_utc": "2026-11-18T11:45:07.514Z",
-  "reason": "Market-data-only on-demand XAUUSD quote and closed M1/M5 refresh for pre-New-York study; no orders"
+  "request_id": "london-close-nyc-profile-2026-11-18T13:19:15Z",
+  "requested_utc": "2026-11-18T13:19:15Z",
+  "reason": "Market-data-only XAUUSD reference quote and closed M1/M5 refresh for London close NYC profile; no orders"
 }
