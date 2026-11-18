@@ -1,5 +1,5 @@
 {
-  "request_id": "london-close-nyc-2026-11-17T13:21:18.749Z",
-  "requested_utc": "2026-11-17T13:21:18.749Z",
-  "reason": "Market-data-only on-demand XAUUSD reference quote and closed M1/M5 refresh for post-London analysis; no orders"
+  "request_id": "daily-xauusd-bias-2026-11-18T06:36:32.670Z",
+  "requested_utc": "2026-11-18T06:36:32.670Z",
+  "reason": "Market-data-only on-demand XAUUSD reference quote and closed M1/M5 refresh for daily bias; no trading orders"
 }
