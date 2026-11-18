@@ -1,43 +1,22 @@
 {
   "instrument": "XAU/USD",
   "provider": "Twelve Data",
-  "retrieved_utc": "2026-11-18T00:07:35.469600+00:00",
+  "retrieved_utc": "2026-11-18T01:44:05.478432+00:00",
   "on_demand_request": null,
-  "latest_price": 3842.754,
+  "latest_price": 3811.557,
   "quote_timestamp_utc": null,
   "quote_status": "retrieved_from_price_endpoint_timestamp_unknown",
   "last_closed_1min": {
-    "start_utc": "2026-11-18T00:06:00+00:00",
-    "close_utc": "2026-11-18T00:07:00+00:00",
-    "open": 3842.147,
-    "high": 3842.583,
-    "low": 3841.426,
-    "close": 3841.508,
-    "age_minutes_at_generation": 0.6
+    "start_utc": "2026-11-18T01:42:00+00:00",
+    "close_utc": "2026-11-18T01:43:00+00:00",
+    "open": 3814.49,
+    "high": 3814.49,
+    "low": 3812.865,
+    "close": 3813.026,
+    "age_minutes_at_generation": 1.1
   },
   "minute_data_status": "fresh_at_generation",
   "recent_unrevisited_m1_fvg_candidates": [
-    {
-      "formed_utc": "2026-11-17T15:49:00+00:00",
-      "direction": "bearish",
-      "low": 3880.651,
-      "high": 3880.795,
-      "status": "not subsequently touched by available bars"
-    },
-    {
-      "formed_utc": "2026-11-17T15:59:00+00:00",
-      "direction": "bearish",
-      "low": 3876.988,
-      "high": 3877.311,
-      "status": "not subsequently touched by available bars"
-    },
-    {
-      "formed_utc": "2026-11-17T17:55:00+00:00",
-      "direction": "bearish",
-      "low": 3864.811,
-      "high": 3864.83,
-      "status": "not subsequently touched by available bars"
-    },
     {
       "formed_utc": "2026-11-17T18:40:00+00:00",
       "direction": "bearish",
@@ -65,70 +44,98 @@
       "low": 3844.414,
       "high": 3844.57,
       "status": "not subsequently touched by available bars"
+    },
+    {
+      "formed_utc": "2026-11-18T00:24:00+00:00",
+      "direction": "bearish",
+      "low": 3839.95,
+      "high": 3840.246,
+      "status": "not subsequently touched by available bars"
+    },
+    {
+      "formed_utc": "2026-11-18T00:27:00+00:00",
+      "direction": "bearish",
+      "low": 3833.033,
+      "high": 3833.152,
+      "status": "not subsequently touched by available bars"
+    },
+    {
+      "formed_utc": "2026-11-18T00:32:00+00:00",
+      "direction": "bearish",
+      "low": 3830.743,
+      "high": 3830.831,
+      "status": "not subsequently touched by available bars"
+    },
+    {
+      "formed_utc": "2026-11-18T01:41:00+00:00",
+      "direction": "bearish",
+      "low": 3818.07,
+      "high": 3818.975,
+      "status": "not subsequently touched by available bars"
     }
   ],
   "confirmed_m1_fractal_pivots_not_protected_swings": {
     "confirmed_fractal_highs": [
       {
-        "time_utc": "2026-11-17T23:23:00+00:00",
-        "price": 3858.398
+        "time_utc": "2026-11-18T01:08:00+00:00",
+        "price": 3830.729
       },
       {
-        "time_utc": "2026-11-17T23:26:00+00:00",
-        "price": 3858.398
+        "time_utc": "2026-11-18T01:15:00+00:00",
+        "price": 3827.551
       },
       {
-        "time_utc": "2026-11-17T23:31:00+00:00",
-        "price": 3857.564
+        "time_utc": "2026-11-18T01:22:00+00:00",
+        "price": 3822.192
       },
       {
-        "time_utc": "2026-11-17T23:45:00+00:00",
-        "price": 3849.874
+        "time_utc": "2026-11-18T01:27:00+00:00",
+        "price": 3819.099
       },
       {
-        "time_utc": "2026-11-17T23:54:00+00:00",
-        "price": 3852.08
+        "time_utc": "2026-11-18T01:33:00+00:00",
+        "price": 3822.046
       },
       {
-        "time_utc": "2026-11-17T23:59:00+00:00",
-        "price": 3854.212
+        "time_utc": "2026-11-18T01:40:00+00:00",
+        "price": 3822.229
       }
     ],
     "confirmed_fractal_lows": [
       {
-        "time_utc": "2026-11-17T23:11:00+00:00",
-        "price": 3850.745
+        "time_utc": "2026-11-18T00:56:00+00:00",
+        "price": 3814.755
       },
       {
-        "time_utc": "2026-11-17T23:16:00+00:00",
-        "price": 3851.656
+        "time_utc": "2026-11-18T01:03:00+00:00",
+        "price": 3809.885
       },
       {
-        "time_utc": "2026-11-17T23:22:00+00:00",
-        "price": 3851.666
+        "time_utc": "2026-11-18T01:11:00+00:00",
+        "price": 3820.002
       },
       {
-        "time_utc": "2026-11-17T23:36:00+00:00",
-        "price": 3849.002
+        "time_utc": "2026-11-18T01:16:00+00:00",
+        "price": 3816.503
       },
       {
-        "time_utc": "2026-11-17T23:43:00+00:00",
-        "price": 3847.366
+        "time_utc": "2026-11-18T01:28:00+00:00",
+        "price": 3812.719
       },
       {
-        "time_utc": "2026-11-17T23:47:00+00:00",
-        "price": 3845.643
+        "time_utc": "2026-11-18T01:37:00+00:00",
+        "price": 3816.772
       }
     ]
   },
   "last_closed_5min": {
-    "start_utc": "2026-11-18T00:00:00+00:00",
-    "close_utc": "2026-11-18T00:05:00+00:00",
-    "open": 3852.428,
-    "high": 3852.428,
-    "low": 3842.292,
-    "close": 3842.605,
-    "age_minutes_at_generation": 2.6
+    "start_utc": "2026-11-18T01:35:00+00:00",
+    "close_utc": "2026-11-18T01:40:00+00:00",
+    "open": 3819.303,
+    "high": 3821.899,
+    "low": 3816.772,
+    "close": 3819.433,
+    "age_minutes_at_generation": 4.1
   },
   "recent_unrevisited_m5_fvg_candidates": [
     {
@@ -158,18 +165,31 @@
       "low": 3859.33,
       "high": 3859.991,
       "status": "not subsequently touched by available bars"
+    },
+    {
+      "formed_utc": "2026-11-18T00:05:00+00:00",
+      "direction": "bearish",
+      "low": 3843.936,
+      "high": 3850.58,
+      "status": "not subsequently touched by available bars"
+    },
+    {
+      "formed_utc": "2026-11-18T00:25:00+00:00",
+      "direction": "bearish",
+      "low": 3836.201,
+      "high": 3839.214,
+      "status": "not subsequently touched by available bars"
+    },
+    {
+      "formed_utc": "2026-11-18T00:30:00+00:00",
+      "direction": "bearish",
+      "low": 3833.015,
+      "high": 3833.621,
+      "status": "not subsequently touched by available bars"
     }
   ],
   "confirmed_fractal_pivots_not_protected_swings": {
     "confirmed_fractal_highs": [
-      {
-        "time_utc": "2026-11-17T20:35:00+00:00",
-        "price": 3853.713
-      },
-      {
-        "time_utc": "2026-11-17T21:05:00+00:00",
-        "price": 3851.261
-      },
       {
         "time_utc": "2026-11-17T21:35:00+00:00",
         "price": 3858.025
@@ -185,17 +205,17 @@
       {
         "time_utc": "2026-11-17T23:25:00+00:00",
         "price": 3858.398
+      },
+      {
+        "time_utc": "2026-11-17T23:55:00+00:00",
+        "price": 3854.212
+      },
+      {
+        "time_utc": "2026-11-18T01:05:00+00:00",
+        "price": 3830.729
       }
     ],
     "confirmed_fractal_lows": [
-      {
-        "time_utc": "2026-11-17T21:00:00+00:00",
-        "price": 3845.601
-      },
-      {
-        "time_utc": "2026-11-17T21:20:00+00:00",
-        "price": 3848.961
-      },
       {
         "time_utc": "2026-11-17T22:00:00+00:00",
         "price": 3848.818
@@ -211,6 +231,14 @@
       {
         "time_utc": "2026-11-17T23:45:00+00:00",
         "price": 3845.643
+      },
+      {
+        "time_utc": "2026-11-18T01:00:00+00:00",
+        "price": 3809.885
+      },
+      {
+        "time_utc": "2026-11-18T01:25:00+00:00",
+        "price": 3812.719
       }
     ]
   },
@@ -248,12 +276,12 @@
       "start_new_york": "2026-11-17T18:00:00-05:00",
       "end_new_york": "2026-11-18T01:00:00-05:00",
       "expected_m5_bars": 84,
-      "bars_seen": 13,
+      "bars_seen": 32,
       "status": "forming",
       "open": 3850.557,
       "high": 3858.398,
-      "low": 3842.292,
-      "close": 3842.605
+      "low": 3809.885,
+      "close": 3819.433
     },
     "london_01_00_et": {
       "start_new_york": "2026-11-18T01:00:00-05:00",
