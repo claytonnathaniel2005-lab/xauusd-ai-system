@@ -1,15 +1,15 @@
 {
   "instrument": "XAU/USD",
-  "generated_utc": "2026-11-18T12:31:00.099604+00:00",
+  "generated_utc": "2026-11-18T13:18:02.272994+00:00",
   "provider": "Twelve Data",
   "warning": "DATA REVIEW ONLY. Not an executable trading signal; the Twelve Data feed may differ materially from your OANDA/MT5 execution prices. D1 provider candle boundaries differ from UTC.",
   "timeframes": {
     "5min": {
       "bars_returned": 1000,
-      "last_bar_timestamp": "2026-11-18T12:25:00+00:00",
-      "last_bar_close": 3766.553,
-      "last_bar_high": 3770.166,
-      "last_bar_low": 3766.039,
+      "last_bar_timestamp": "2026-11-18T13:10:00+00:00",
+      "last_bar_close": 3771.201,
+      "last_bar_high": 3771.45,
+      "last_bar_low": 3760.733,
       "candle_status": "closed by UTC bar duration",
       "pivots": {
         "confirmed_fractal_highs": [
@@ -28,20 +28,27 @@
         ],
         "confirmed_fractal_lows": [
           {
-            "time_utc": "2026-11-18T10:25:00+00:00",
-            "price": 3767.756
-          },
-          {
             "time_utc": "2026-11-18T11:15:00+00:00",
             "price": 3761.52
           },
           {
             "time_utc": "2026-11-18T11:50:00+00:00",
             "price": 3758.842
+          },
+          {
+            "time_utc": "2026-11-18T12:55:00+00:00",
+            "price": 3742.264
           }
         ]
       },
       "recent_unrevisited_fvg_candidates": [
+        {
+          "formed_utc": "2026-11-18T00:30:00+00:00",
+          "direction": "bearish",
+          "low": 3833.015,
+          "high": 3833.621,
+          "status": "not subsequently touched by available bars"
+        },
         {
           "formed_utc": "2026-11-18T10:05:00+00:00",
           "direction": "bearish",
@@ -50,41 +57,30 @@
           "status": "not subsequently touched by available bars"
         },
         {
-          "formed_utc": "2026-11-18T12:00:00+00:00",
+          "formed_utc": "2026-11-18T13:05:00+00:00",
           "direction": "bullish",
-          "low": 3762.08,
-          "high": 3763.411,
+          "low": 3747.615,
+          "high": 3752.771,
           "status": "not subsequently touched by available bars"
         },
         {
-          "formed_utc": "2026-11-18T12:05:00+00:00",
+          "formed_utc": "2026-11-18T13:10:00+00:00",
           "direction": "bullish",
-          "low": 3764.21,
-          "high": 3765.084,
-          "status": "not subsequently touched by available bars"
-        },
-        {
-          "formed_utc": "2026-11-18T12:25:00+00:00",
-          "direction": "bearish",
-          "low": 3770.166,
-          "high": 3770.455,
+          "low": 3755.686,
+          "high": 3760.733,
           "status": "not subsequently touched by available bars"
         }
       ]
     },
     "15min": {
       "bars_returned": 480,
-      "last_bar_timestamp": "2026-11-18T12:15:00+00:00",
-      "last_bar_close": 3766.553,
-      "last_bar_high": 3773.41,
-      "last_bar_low": 3766.039,
+      "last_bar_timestamp": "2026-11-18T13:00:00+00:00",
+      "last_bar_close": 3771.201,
+      "last_bar_high": 3771.45,
+      "last_bar_low": 3743.768,
       "candle_status": "closed by UTC bar duration",
       "pivots": {
         "confirmed_fractal_highs": [
-          {
-            "time_utc": "2026-11-18T05:30:00+00:00",
-            "price": 3797.084
-          },
           {
             "time_utc": "2026-11-18T09:30:00+00:00",
             "price": 3786.588
@@ -92,6 +88,10 @@
           {
             "time_utc": "2026-11-18T11:00:00+00:00",
             "price": 3773.585
+          },
+          {
+            "time_utc": "2026-11-18T12:15:00+00:00",
+            "price": 3773.41
           }
         ],
         "confirmed_fractal_lows": [
@@ -110,6 +110,13 @@
         ]
       },
       "recent_unrevisited_fvg_candidates": [
+        {
+          "formed_utc": "2026-11-17T18:45:00+00:00",
+          "direction": "bearish",
+          "low": 3859.33,
+          "high": 3859.961,
+          "status": "not subsequently touched by available bars"
+        },
         {
           "formed_utc": "2026-11-18T00:15:00+00:00",
           "direction": "bearish",
@@ -130,22 +137,15 @@
           "low": 3774.297,
           "high": 3778.004,
           "status": "not subsequently touched by available bars"
-        },
-        {
-          "formed_utc": "2026-11-18T12:15:00+00:00",
-          "direction": "bullish",
-          "low": 3764.21,
-          "high": 3766.039,
-          "status": "not subsequently touched by available bars"
         }
       ]
     },
     "1h": {
       "bars_returned": 500,
-      "last_bar_timestamp": "2026-11-18T11:00:00+00:00",
-      "last_bar_close": 3763.604,
-      "last_bar_high": 3773.585,
-      "last_bar_low": 3758.842,
+      "last_bar_timestamp": "2026-11-18T12:00:00+00:00",
+      "last_bar_close": 3746.12,
+      "last_bar_high": 3773.41,
+      "last_bar_low": 3742.264,
       "candle_status": "closed by UTC bar duration",
       "pivots": {
         "confirmed_fractal_highs": [
@@ -249,9 +249,9 @@
     "1day": {
       "bars_returned": 100,
       "last_bar_timestamp": "2026-11-18T00:00:00+00:00",
-      "last_bar_close": 3766.553,
+      "last_bar_close": 3769.09,
       "last_bar_high": 3858.398,
-      "last_bar_low": 3757.394,
+      "last_bar_low": 3742.264,
       "candle_status": "UNVERIFIED: daily provider boundary",
       "pivots": {
         "confirmed_fractal_highs": [
@@ -325,38 +325,46 @@
       "start_new_york": "2026-11-18T01:00:00-05:00",
       "end_new_york": "2026-11-18T08:00:00-05:00",
       "expected_m5_bars": 84,
-      "bars_seen": 78,
-      "status": "forming",
+      "bars_seen": 84,
+      "status": "complete",
       "open": 3789.617,
       "high": 3789.617,
-      "low": 3757.394,
-      "close": 3766.553
+      "low": 3742.264,
+      "close": 3746.12
     },
     "new_york_08_00_et": {
       "start_new_york": "2026-11-18T08:00:00-05:00",
       "end_new_york": "2026-11-18T15:00:00-05:00",
       "expected_m5_bars": 84,
-      "bars_seen": 0,
-      "status": "not_started"
+      "bars_seen": 3,
+      "status": "forming",
+      "open": 3745.501,
+      "high": 3771.45,
+      "low": 3743.768,
+      "close": 3771.201
     },
     "model_status": "study_only; unconfirmed without HTF key-level and CISD validation",
     "entry_signal": "NO TRADE (CISD, protected swing and >=2R entry not verified)",
     "invalidation_note": "A TTrades 18:00/01:00 continuation profile needs the correct opposing swing and 01:00 candle close for its 50% invalidation. Those swings are NOT verified by generic fractal pivots.",
     "scenario_candidates": [
       {
-        "profile": "Asia or London reversal -> NY continuation",
-        "requirement": "Confirm meaningful HTF swing, London reaction and a real CISD on M5/M15."
+        "profile": "Bearish Asia reversal / London expansion -> NY continuation (candidate)",
+        "reason": "London expanded and closed below Asia 7h low without taking Asia 7h high.",
+        "ny_confirmation": "NY should respect a valid structural pullback and continue lower; require CISD on LTF."
       },
       {
-        "profile": "NY reversal / NY manipulation",
-        "requirement": "Wait for NY to sweep a session range or reach an untouched HTF PD array, then confirm CISD."
-      },
-      {
-        "profile": "Seek and Destroy / NO TRADE",
-        "requirement": "Watch for both-sided liquidity raids, failed expansions and nearby major news."
+        "profile": "Alternative NY reversal watch",
+        "reason": "Only applicable if London did NOT complete a valid reversal at a relevant HTF key level.",
+        "ny_confirmation": "NY must reach/sweep the missing HTF level, reject, and print confirmed CISD."
       }
     ],
-    "stage": "preliminary / wait for 01:00-08:00 ET London 7h candle close"
+    "stage": "London 7h closed; NY scenarios still conditional",
+    "mechanical_observations": {
+      "london_took_asia_7h_high": false,
+      "london_took_asia_7h_low": true,
+      "london_range_equilibrium": 3765.941,
+      "london_body_direction": "down"
+    }
   },
   "quality_warnings": [
     "Nearly flat Saturday bars detected on 1h; do not interpret weekend bars as live liquidity."
