@@ -1,13 +1,9 @@
 {
   "instrument": "XAU/USD",
   "provider": "Twelve Data",
-  "retrieved_utc": "2026-11-19T14:37:56.357934+00:00",
-  "on_demand_request": {
-    "request_id": "bias-now-2026-11-19T14:37:42.315Z",
-    "requested_utc": "2026-11-19T14:37:42.315000+00:00",
-    "status": "trigger_recognized"
-  },
-  "latest_price": 3714.71,
+  "retrieved_utc": "2026-11-19T14:38:43.692539+00:00",
+  "on_demand_request": null,
+  "latest_price": 3710.988,
   "quote_timestamp_utc": null,
   "quote_status": "retrieved_from_price_endpoint_timestamp_unknown",
   "last_closed_1min": {
@@ -17,7 +13,7 @@
     "high": 3715.182,
     "low": 3712.001,
     "close": 3712.538,
-    "age_minutes_at_generation": 0.9
+    "age_minutes_at_generation": 1.7
   },
   "minute_data_status": "fresh_at_generation",
   "recent_unrevisited_m1_fvg_candidates": [
@@ -111,7 +107,7 @@
     "high": 3715.538,
     "low": 3707.633,
     "close": 3715.323,
-    "age_minutes_at_generation": 2.9
+    "age_minutes_at_generation": 3.7
   },
   "recent_unrevisited_m5_fvg_candidates": [
     {
