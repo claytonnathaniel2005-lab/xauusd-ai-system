@@ -1,5 +1,5 @@
 {
-  "request_id": "evening-bias-2026-11-20T12:47:30Z",
-  "requested_utc": "2026-11-20T12:47:30Z",
-  "reason": "Market-data-only XAU/USD Twelve Data quote and closed M1/M5 refresh for evening daily bias; no trading orders"
+  "request_id": "london-close-2026-11-20T13:25:17.894Z",
+  "requested_utc": "2026-11-20T13:25:17.894Z",
+  "reason": "Market-data-only XAU/USD Twelve Data quote and closed M1/M5 refresh for London-to-New York report; no orders"
 }
