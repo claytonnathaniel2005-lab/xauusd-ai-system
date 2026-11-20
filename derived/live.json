@@ -1,23 +1,23 @@
 {
   "instrument": "XAU/USD",
   "provider": "Twelve Data",
-  "retrieved_utc": "2026-11-20T06:11:50.680274+00:00",
+  "retrieved_utc": "2026-11-20T06:13:55.958972+00:00",
   "on_demand_request": {
-    "request_id": "daily-bias-2026-11-20T06:11:35.424Z",
-    "requested_utc": "2026-11-20T06:11:35.424000+00:00",
+    "request_id": "sell-target-2026-11-20T06:13:38.890Z",
+    "requested_utc": "2026-11-20T06:13:38.890000+00:00",
     "status": "trigger_recognized"
   },
-  "latest_price": 3561.507,
+  "latest_price": 3555.682,
   "quote_timestamp_utc": null,
   "quote_status": "retrieved_from_price_endpoint_timestamp_unknown",
   "last_closed_1min": {
-    "start_utc": "2026-11-20T06:10:00+00:00",
-    "close_utc": "2026-11-20T06:11:00+00:00",
-    "open": 3560.584,
-    "high": 3562.741,
-    "low": 3559.859,
-    "close": 3559.958,
-    "age_minutes_at_generation": 0.8
+    "start_utc": "2026-11-20T06:12:00+00:00",
+    "close_utc": "2026-11-20T06:13:00+00:00",
+    "open": 3562.743,
+    "high": 3565.768,
+    "low": 3557.59,
+    "close": 3564.901,
+    "age_minutes_at_generation": 0.9
   },
   "minute_data_status": "fresh_at_generation",
   "recent_unrevisited_m1_fvg_candidates": [
@@ -139,7 +139,7 @@
     "high": 3563.03,
     "low": 3545.722,
     "close": 3562.185,
-    "age_minutes_at_generation": 1.8
+    "age_minutes_at_generation": 3.9
   },
   "recent_unrevisited_m5_fvg_candidates": [
     {
