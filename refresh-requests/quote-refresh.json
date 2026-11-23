@@ -1,5 +1,5 @@
 {
-  "request_id": "daily-bias-2026-11-23T06:34:12.431Z",
-  "requested_utc": "2026-11-23T06:34:12.431Z",
-  "reason": "Market-data-only on-demand XAU/USD Twelve Data reference quote and closed M1/M5 refresh for weekday daily bias; no trading orders"
+  "request_id": "pre-ny-2026-11-23T11:51:49.525Z",
+  "requested_utc": "2026-11-23T11:51:49.525Z",
+  "reason": "Market-data-only on-demand XAU/USD Twelve Data reference quote and closed M1/M5 refresh for pre-New-York briefing; no orders"
 }
